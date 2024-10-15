@@ -1,0 +1,154 @@
+body {
+  padding-top: 72px;
+}
+
+ul, li, a {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  background-color: #FFF;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 5%),
+  0 4px 8px 0 rgb(0 0 0 / 5%);
+}
+
+.navbar {
+  padding: 1rem;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+}
+
+.selected, .navbar li a:hover, .paginas a:hover {
+  color: #0d6efd !important;
+}
+
+.carousel-indicators button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+}
+
+#home-quote {
+  background: url('../img/banners/banner4.jpg') center center;
+  background-size: cover;
+}
+
+.title-faq {
+  font-weight: 500;
+}
+
+.infos-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.paginas li {
+  margin-bottom: 5px;
+}
+
+.paginas a {
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 5px 0px;
+  display: block;
+  color: #ababab;
+}
+
+.contato {
+  color: #ababab;
+}
+
+.title-footer {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFF !important;
+}
+
+.title-servicos {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.pulse {
+  animation: pulse .5s infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.box-whatsapp {
+  z-index: 100;
+  position: fixed;
+  float: right;
+  right: 10px;
+  bottom: 10px;
+  width: 60px;
+  background-color: #25d366;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-whatsapp a {
+  position: relative;
+  left: 12px;
+}
+
+.box-whatsapp a img {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      filter: brightness(100%);
+  }
+  100% {
+      transform: scale(1.04);
+      filter: brightness(110%);
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-brand img {
+    width: 200px;
+  }
+  .navbar {
+    padding: 0.5rem 0rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .infos-footer {
+    justify-content: flex-start;
+    padding-left: 5%;
+  }
+  .contato {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 370px) {
+  .navbar-brand img {
+    width: 170px;
+  }
+  .navbar-toggler {
+    padding: 0.10rem 0.30rem;
+  }
+}
