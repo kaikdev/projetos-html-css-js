@@ -17,3 +17,7 @@ Em alguns deles, utilizei bibliotecas como Bootstrap e Splide.js para ajudar com
 - **projetos-complexos/**: Projetos mais elaborados.
 
 Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já desenvolvi. Este repositório serve como uma vitrine do meu trabalho com páginas web estáticas e funcionalidades básicas em JavaScript.
+
+## Acesse os Projetos Online
+
+- **Home Care**: https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-home-care/
