@@ -20,4 +20,4 @@ Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já d
 
 ## Acesse os Projetos Online
 
-- **Home Care**: https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-home-care/
+- **Home Care**: [https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-home-care/](https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-home-care/)
