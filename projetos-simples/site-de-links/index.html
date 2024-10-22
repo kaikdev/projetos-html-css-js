@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seus Links</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a class="btn-share" href="javascript:void(0)" onclick="share()">
+            <i class="fa-solid fa-share-nodes"></i>
+        </a>
+
+        <a href="#" class="btn-insc" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fa-solid fa-bell"></i>
+            <span>Se inscrever</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="box-principal">
+            <div class="area-imagem" style="background-image: url('img/logo.jpg')";>
+            </div>
+            
+            <div class="title">
+                <span>@Empresa</span>
+            </div>
+
+            <div class="descricao">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus dolores quae sed corporis fuga.
+            </div>
+
+            <div class="peq-descricao">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </div>
+
+            <div class="area-collapses">
+                <div class="collapse-video">
+                    <a id="exibirVideo" class="title-collapses" data-bs-toggle="collapse" href="#collapseVideo" role="button" aria-expanded="false" aria-controls="collapseVideo">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4503/4503949.png" height="40px">
+                        <span>COLLAPSE VIDEO</span>
+                        <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <div class="collapse" id="collapseVideo">
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/_K9YV4t9dzY?si=TtHUL5CmEfC_Zz9H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        
+                        <div>
+                            <a id="ocultarVideo" class="btn-closecollapse" data-bs-toggle="collapse" href="#collapseVideo" role="button" aria-expanded="false" aria-controls="collapseVideo">
+                                <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse-conteudo">
+                    <a id="exibirDescricao" class="title-collapses" data-bs-toggle="collapse" href="#collapseConteudo" role="button" aria-expanded="false" aria-controls="collapseConteudo">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1945/1945891.png" height="40px">
+                        <span>COLLAPSE EBOOK</span>
+                        <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                    </a>
+
+                    <div class="collapse" id="collapseConteudo">         
+                        <object data="img/ebook.pdf" type="application/pdf">
+                            <p>Seu navegador não tem um plugin pra PDF.</p>
+                            <p>Faça Download para visualizar o PDF.</p> 
+                        </object>
+
+                        <div>
+                            <a href="#" class="btn-view">
+                                Download
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <a id="ocultarDescricao" class="btn-closecollapse" data-bs-toggle="collapse" href="#collapseConteudo" role="button" aria-expanded="false" aria-controls="collapseConteudo">
+                                <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="title-collapses" href="#">
+                    <img src="img/usuario.png" height="40px">
+                    <span>LINK NORMAL</span>
+                </a>
+            </div>
+
+            <div class="area-sociais">
+                <ul>
+                    <li>
+                        <a href="#"><img src="img/facebook.png" alt="facebook" width="35px"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/instagram.png" alt="instagram" width="35px"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/telegram.png" alt="telegram" width="35px"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/twitter.png" alt="twitter" width="35px"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Modal Subscribe -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="topo-modal">
+                        <div class="area-imagem" style="background-image: url('img/logo.jpg')";>
+                        </div>
+                        
+                        <div class="title">
+                            <span>Inscreva-se na @Empresa</span>
+                        </div>
+            
+                        <div class="descricao">
+                            Fique por dentro de tudo que é importante.
+                        </div>
+                    </div>
+
+                    <div class="conteudo-modal">
+                        <div class="menu-modal">
+                            <button id="emailAtivado" class="ativado" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEmail" aria-expanded="false" aria-controls="collapseEmail">E-mail</button>
+
+                            <button id="telefoneAtivado" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTelefone" aria-expanded="false" aria-controls="collapseTelefone">Telefone</button>
+                        </div>
+                        <div class="dados-modal">
+                            <div class="collapse show" id="collapseEmail">
+                                <input type="text" placeholder="Insira o seu e-mail">
+                            </div>
+
+                            <div class="collapse" id="collapseTelefone">
+                                <input type="text" placeholder="Insira o seu número">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="area-checks">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="termos1" checked>
+                            
+                            <label class="form-check-label" for="termos1">
+                                Eu concordo com os Termos e Condições e o Aviso de Privacidade da CtrlSer.
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="termos2" checked>
+                            
+                            <label class="form-check-label" for="termos2">
+                                Concordo que meus dados de contato sejam compartilhados com CtrlSer, que pode entrar em contato comigo.
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="modal-insc" type="submit">Se inscrever</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
