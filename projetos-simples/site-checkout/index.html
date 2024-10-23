@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <span class="temp">10:00:00</span>
+
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"></path></svg>
+        
+        <span class="chamada">A última chamada!!</span>
+    </header>
+    <main>
+        <section class="corpo-checkout">
+            <div class="imagem-topo">
+                <img src="img/imagem-topo.png" width="100%">
+            </div>
+
+            <div class="conteudo-principal">
+                <div class="infos">
+                    <div class="select-idioma">
+                        <select class="form-select" aria-label="Idioma">
+                            <option value="1" selected >Brasil</option>
+                            <option value="2">Internacional</option>
+                        </select>
+                    </div>
+
+                    <div class="inputs-dados">
+                        <div class="input-group input-group-sm flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">
+                                <img src="img/user.png" width="25px">
+                            </span>
+
+                            <input type="text" class="form-control" placeholder="Digite seu nome completo" aria-label="Nome completo" aria-describedby="addon-wrapping">
+                        </div>
+
+                        <div class="input-group input-group-sm flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">
+                                <img src="img/email-input.png" width="25px">
+                            </span>
+
+                            <input type="email" class="form-control" placeholder="Digite seu e-mail" aria-label="E-mail" aria-describedby="addon-wrapping">
+                        </div>
+
+                        <div class="input-group input-group-sm flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">
+                                <img src="img/cadeado-input.png" width="25px">
+                            </span>
+
+                            <input type="text" class="form-control" placeholder="CPF / CNPJ" aria-label="CPF/CNPJ" aria-describedby="addon-wrapping">
+                        </div>
+
+                        <div class="input-tel">
+                            <div class="input-group input-group-sm flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <img src="img/ddd.png" width="25px">
+                                </span>
+    
+                                <input type="text" class="form-control" placeholder="DDD" aria-label="DDD" aria-describedby="addon-wrapping">
+                            </div>
+
+                            <div class="input-group input-group-sm flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <img src="img/telefone.png" width="25px">
+                                </span>
+    
+                                <input type="text" class="form-control" placeholder="Celular" aria-label="Celular" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-pagamentos">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="formaDePagamento" value="cartao" id="cartaoDeCredito" checked>
+                            
+                            <label class="form-check-label" for="cartaoDeCredito" id="labelCartao">
+                                <img src="img/cartao.png" alt="Cartão de Crédito" width="30px">
+                                <span>Cartão de Crédito</span>
+                            </label>
+                        </div>
+
+                        <div class="form-check" >
+                            <input class="form-check-input" type="radio" name="formaDePagamento" value="boleto" id="boleto">
+                            
+                            <label class="form-check-label" for="boleto" id="labelBoleto">
+                                <img src="img/boleto.png" alt="Boleto" width="30px">
+                                <span>Boleto</span>
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="formaDePagamento" value="pix" id="pix">
+                            
+                            <label class="form-check-label" for="pix" id="labelPix">
+                                <img src="img/pix.png" alt="Pix" width="35px">
+                                <span>PIX</span>
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="formaDePagamento" value="cripto" id="cripto">
+                            
+                            <label class="form-check-label" for="cripto" id="labelCripto">
+                                <img src="img/criptomoedas.png" alt="Pix" width="35px">
+                                <span>Criptomoedas</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="collapses-pagamentos">
+                        <div class="collapse show" id="collapseCartao">
+                            <div class="menu-cartoes">
+                                <button id="optOnecard" class="ativado">
+                                    <img src="img/cartao.png" alt="Comprar com 1 cartão de crédito" width="25px">
+                                    <span>Cartão de crédito</span>
+                                </button>
+
+                                <button id="optTwocard" class="">
+                                    <img src="img/2-cartoes.png" alt="Comprar com 2 cartões de crédito" width="25px">
+                                    <span>Dois Cartões</span>
+                                </button>
+                            </div>
+
+                            <div class="collapse show opt-umcartao" id="collapseOneCard">
+                                <div class="container">
+                                    <div class="card-container">
+                                        <div class="front">
+                                            <div class="image">
+                                                <img src="img/chip.png" alt="">
+                                                <img src="img/bandeiras.png" alt="">
+                                            </div>
+                                            <div class="card-number-box">0000 0000 0000 0000</div>
+                                            <div class="flexbox">
+                                                <div class="box">
+                                                    <span>Nome do titular</span>
+                                                    <div class="card-holder-name">ex: João da Silva</div>
+                                                </div>
+                                                <div class="box">
+                                                    <span>Válido até</span>
+                                                    <div class="expiration">
+                                                        <span class="exp-month">mês</span>
+                                                        <span class="exp-month">/</span>
+                                                        <span class="exp-year">ano</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="back">
+                                            <div class="stripe"></div>
+                                            <div class="box">
+                                                <span>CVC / CVV</span>
+                                                <div class="cvv-box"></div>
+                                                <img src="img/bandeiras.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <form action="">
+                                        <div class="inputBox">
+                                            <span>Bandeira do Cartão</span>
+                                            <select name="" id="">
+                                                <option value="">Mastercard</option>
+                                                <option value="">Visa</option>
+                                                <option value="">Elo</option>
+                                                <option value="">AmericanExpress</option>
+                                            </select>
+                                        </div>
+    
+                                        <div class="inputBox">
+                                            <span>Número do cartão</span>
+
+                                            <div class="input-group input-group-sm flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping">
+                                                    <img src="img/cartao.png" width="25px">
+                                                </span>
+                    
+                                                <input type="text" maxlength="16" class="card-number-input" id="numCard">
+                                            </div>
+                                        </div>
+
+                                        <div class="inputBox">
+                                            <span>Nome do titular</span>
+                                            
+                                            <div class="input-group input-group-sm flex-nowrap">
+                                                <span class="input-group-text" id="addon-wrapping">
+                                                    <img src="img/user.png" width="25px">
+                                                </span>
+                    
+                                                <input type="text" class="card-holder-input">
+                                            </div>
+                                        </div>
+    
+                                        <div class="flexbox">
+                                            <div class="inputBox">
+                                                <span>Válido até</span>
+                                                <select name="" id="" class="month-input">
+                                                    <option value="month" selected disabled>mês</option>
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                            </div>
+    
+                                            <div class="inputBox">
+                                                <span style="visibility: hidden;">ano</span>
+                                                <select name="" id="" class="year-input">
+                                                    <option value="year" selected disabled>ano</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2025">2025</option>
+                                                    <option value="2026">2026</option>
+                                                    <option value="2027">2027</option>
+                                                    <option value="2028">2028</option>
+                                                    <option value="2029">2029</option>
+                                                    <option value="2030">2030</option>
+                                                </select>
+                                            </div>
+    
+                                            <div class="inputBox">
+                                                <span>CVC / CVV</span>
+                                                <input type="text" maxlength="4" class="cvv-input">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="inputBox">
+                                            <span>Opções de Parcelamento</span>
+                                            <select name="" id="">
+                                                <option value="" selected>1x de R$ 366,60</option>
+                                                <option value="">2x de R$ 366,60</option>
+                                                <option value="">3x de R$ 366,60</option>
+                                                <option value="">4x de R$ 366,60</option>
+                                                <option value="">5x de R$ 366,60</option>
+                                                <option value="">6x de R$ 366,60</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="collapse opt-doiscartoes" id="collapseTwoCard">
+                                <div class="area-cartoesduplos">
+                                    <div class="form-card1">
+                                        <p>Cartão 1</p>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/dinheiro.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Valor no cartão 1" aria-label="Valor no cartão 1" aria-describedby="Valor no cartão 1">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/cartao.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Número do cartão" aria-label="Número do cartão" aria-describedby="Número do cartão">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/user.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Nome do titular" aria-label="Nome do titular" aria-describedby="Nome do titular">
+                                        </div>
+                                        
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/calendario.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Mês de validade (MM)" aria-label="Mês de validade" aria-describedby="Mês de validade">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/calendario.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Ano de validade (AAAA)" aria-label="Ano de validade" aria-describedby="Ano de validade">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/cadeado-input.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="CVC / CVV" aria-label="CVC / CVV" aria-describedby="CVC / CVV">
+                                        </div>
+                                        
+                                        <div class="inputBox">
+                                            <span>Opções de Parcelamento</span>
+                                            <select name="" id="">
+                                                <option value="" selected>1x de R$ 366,60</option>
+                                                <option value="">2x de R$ 366,60</option>
+                                                <option value="">3x de R$ 366,60</option>
+                                                <option value="">4x de R$ 366,60</option>
+                                                <option value="">5x de R$ 366,60</option>
+                                                <option value="">6x de R$ 366,60</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="divisoria-cards"></div>
+
+                                    <div class="form-card2">
+                                        <p>Cartão 2</p>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/dinheiro.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Valor no cartão 2" aria-label="Valor no cartão 2" aria-describedby="Valor no cartão 2">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/cartao.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Número do cartão" aria-label="Número do cartão" aria-describedby="Número do cartão">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/user.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Nome do titular" aria-label="Nome do titular" aria-describedby="Nome do titular">
+                                        </div>
+                                        
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/calendario.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Mês de validade (MM)" aria-label="Mês de validade" aria-describedby="Mês de validade">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/calendario.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="Ano de validade (AAAA)" aria-label="Ano de validade" aria-describedby="Ano de validade">
+                                        </div>
+    
+                                        <div class="input-group input-group-sm flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                <img src="img/cadeado-input.png" width="25px">
+                                            </span>
+                
+                                            <input type="text" class="form-control" placeholder="CVC / CVV" aria-label="CVC / CVV" aria-describedby="CVC / CVV">
+                                        </div>
+                                        
+                                        <div class="inputBox">
+                                            <span>Opções de Parcelamento</span>
+                                            <select name="" id="">
+                                                <option value="" selected>1x de R$ 366,60</option>
+                                                <option value="">2x de R$ 366,60</option>
+                                                <option value="">3x de R$ 366,60</option>
+                                                <option value="">4x de R$ 366,60</option>
+                                                <option value="">5x de R$ 366,60</option>
+                                                <option value="">6x de R$ 366,60</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="collapseBoleto">
+                            <p class="title-bol-pix">Atente-se aos detalhes:</p>
+
+                            <ul>
+                                <li>Boleto (somente à vista).</li>
+
+                                <li>Pagamentos com Boleto Bancário levam <strong>até 3 dias úteis</strong> para serem compensados e então terem os produtos liberados.</li>
+                                
+                                <li>Atente-se ao vencimento do boleto. Você pode pagar o boleto em qualquer banco ou casa lotérica até o dia do vencimento.</li>
+
+                                <li>Depois do pagamento, verifique seu e-mail para receber os dados de acesso ao produto (verifique também a caixa de SPAM).</li>
+                            </ul>
+
+                            <div class="input-group input-group-sm flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">
+                                    <img src="img/cadeado-input.png" width="25px">
+                                </span>
+    
+                                <input type="text" class="form-control" placeholder="Confirme seu CPF / CNPJ" aria-label="CPF/CNPJ" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="collapsePix">
+                            <p class="title-bol-pix">Pague com o Pix, qualquer dia, a qualquer hora:
+                            </p>
+
+                            <ul>
+                                <li>Valor à vista: <strong>R$ 316,70.</strong></li>
+
+                                <li>Liberação imediata!</li>
+                                
+                                <li>É simples, só clicar no botão <strong>"Comprar Agora"</strong> abaixo;</li>
+
+                                <li>E usar o aplicativo do seu banco selecionando a opção PIX;</li>
+
+                                <li>Super seguro. O pagamento PIX foi desenvolvido pelo Banco Central do Brasil.</li>
+                            </ul>
+                        </div>
+
+                        <div class="collapse" id="collapseCripto">
+                            <p class="title-bol-pix">Pague com Criptomoedas, qualquer dia, a qualquer hora:
+                            </p>
+
+                            <ul>
+                                <li>Valor à vista: <strong>R$ 316,70.</strong></li>
+
+                                <li>Liberação imediata!</li>
+                                
+                                <li>É simples, só clicar no botão <strong>"Comprar Agora"</strong> abaixo;</li>
+
+                                <li>E usar a sua carteira de criptomoedas para realizar a transferência.</li>
+                            </ul>
+
+                            <div class="inputBox">
+                                <span>
+                                    Selecione a Criptomoeda: 
+                                    <i class="fa-brands fa-bitcoin"></i>
+                                    <i class="fa-brands fa-ethereum"></i>
+                                    <i class="fa-solid fa-t"></i>
+                                </span>
+                                <select name="" id="">
+                                    <option value="" selected>Bitcoin</option>
+                                    <option value="">Ethereum</option>
+                                    <option value="">USDT</i></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-checkout">
+                        <div class="title-produto">
+                            <p>Nome do Produto - Automático</p>
+                            <span class="preco-prod">1x de R$ 366,60</span>
+                        </div>
+
+                        <div class="produtos-adicionais">
+                            <div class="card-prod-adicional">
+                                <div class="title">
+                                    <span>Dê adeus ao amadorismo</span>
+                                </div>
+
+                                <div class="area-produto">
+                                    <div class="area-seta">
+                                        <img src="img/seta.png" width="45px">
+                                    </div>
+                                    <div class="input-produto">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="produto1">
+                                            
+                                            <label class="form-check-label" for="produto1">
+                                                <img src="img/produto.png" width="60px">
+                                                <span>Sim, desejo adicionar <strong>SISTEMA DE GERENCIAMENTO INTELIGENTE</strong> por + <span class="preco-prod">R$ 49,90</span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>Profissionalize-se</p>
+                            </div>
+
+                            <div class="card-prod-adicional">
+                                <div class="title">
+                                    <span>Você sempre um passo a frente</span>
+                                </div>
+
+                                <div class="area-produto">
+                                    <div class="area-seta">
+                                        <img src="img/seta.png" width="45px">
+                                    </div>
+                                    <div class="input-produto">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="produto2">
+                                            
+                                            <label class="form-check-label" for="produto2">
+                                                <img src="img/produto.png" width="60px">
+                                                <span>Sim, desejo adicionar <strong>ACESSO A TODAS AS ATUALIZAÇÕES FUTURAS</strong> por + <span class="preco-prod">R$ 19,70</span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>Tenha acesso premium a todas as atualizações e novidades adicionais</p>
+                            </div>
+                        </div>
+
+                        <div class="btn-comprar">
+                            <a href="#">Comprar Agora</a>
+                        </div>
+
+                        <div class="pequenas-info-footer">
+                            <p> 
+                                <span>Precisa de ajuda?</span>
+                                <a href="#">
+                                    Contato do(a) vendedor(a) - contato@email.com
+                                </a>
+                            </p>
+                            <p>
+                                *O valor parcelado possui acréscimo.
+                            </p>
+                            <p>
+                                Empresa está processando este pedido a serviço de "Produto", ao continuar, você concorda com os 
+                                <a href="#">Termos de Compra</a>
+                            </p>
+                            <p>
+                                <span>Empresa © 2022 - Todos os direitos reservados</span>
+                                <p>REF.: 99999999999999999999</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-info">
+                    <div class="item-card">
+                        <div class="title-card">
+                            <img src="img/privacidade.png" alt="Privacidade" width="35px">
+                            <span>Privacidade</span>
+                        </div>
+                        <div class="sub-card">
+                            <span>Sua informação 100% segura</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="title-card">
+                            <img src="img/seguro.png" alt="Compra Segura" width="35px">
+                            <span>Compra segura</span>
+                        </div>
+                        <div class="sub-card">
+                            <span>Ambiente seguro e autenticado</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="title-card">
+                            <img src="img/email.png" alt="Entregue via E-mail" width="35px">
+                            <span>Entregue via E-mail</span>
+                        </div>
+                        <div class="sub-card">
+                            <span>Acesso ao produto entregue por e-mail</span>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="title-card">
+                            <img src="img/aprovado.png" alt="Conteúdo aprovado" width="35px">
+                            <span>Conteúdo aprovado</span>
+                        </div>
+                        <div class="sub-card">
+                            <span>100% revisado e aprovado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="imagem-baixo">
+                <img src="img/imagem-baixo.png" width="100%">
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+        $("#numCard").mask("0000 0000 0000 0000");
+    </script>
+</body>
+</html>

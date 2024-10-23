@@ -1,0 +1,818 @@
+@font-face {
+    font-family: "AccordAlternate";
+    src: url("../fonts/AccordAlternate-Regular.ttf") format("truetype");
+}
+
+* {
+    font-family: 'AccordAlternate', 'Arial';
+}
+
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: rgb(16, 162, 6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 1rem;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 85px !important;
+    z-index: 9;
+}
+
+header .temp {
+    font-family: 'Arial';
+    letter-spacing: 5px;
+}
+
+header .chamada {
+    font-size: .7rem;
+    font-weight: 600;
+    position: relative;
+    top: 2px;
+    letter-spacing: 1px;
+}
+
+main {
+    background-color: rgb(138, 2, 1);
+    margin-top: 85px;
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+}
+
+.corpo-checkout {
+    display: grid;
+    gap: 10px;
+    max-width: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.infos {
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.select-idioma {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.select-idioma select {
+    max-width: 120px;
+    padding: 5px;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.form-select:focus {
+    border-color: rgb(49, 49, 49);
+    box-shadow: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.inputs-dados .input-group {
+    margin-top: 10px;
+}
+
+.inputs-dados .input-group input {
+    font-size: 12px;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.2);
+}
+
+.input-tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-tel .input-group:nth-child(1) {
+    max-width: 40%;
+}
+
+.menu-pagamentos {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-pagamentos a {
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 10px;
+    color: #000;
+    font-size: 12px;
+    width: 125px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-pagamentos .form-check {
+    position: relative;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    color: #000;
+    font-size: 10px;
+    width: 125px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-pagamentos .form-check input {
+    width: 0.75rem;
+    height: 0.75rem;
+    position: relative;
+    left: 25px;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.menu-pagamentos .form-check label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-pagamentos .form-check label span {
+    max-width: 45px;
+}
+
+.menu-pagamentos #labelCartao img, .menu-pagamentos #labelCartao span {
+    position: relative;
+    left: 10px;
+}
+
+.produtos-adicionais {
+    margin-top: 1rem;
+}
+
+.card-prod-adicional {
+    border: 2px dashed #ff0000;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.card-prod-adicional .title {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 10px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+}
+
+.card-prod-adicional .area-produto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.card-prod-adicional .area-produto label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: .9rem;
+}
+
+.card-prod-adicional .area-produto label img {
+    border-radius: 5px;
+}
+
+.input-produto .form-check {
+    position: relative;
+}
+
+.input-produto {
+    border: 1px solid #ced4da;
+    border-bottom: 5px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.input-produto input {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+span.preco-prod {
+    color: #8d8d8d;
+    font-weight: bold;
+}
+
+.title-produto p {
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.collapses-pagamentos {
+    margin-bottom: 1.2rem;
+}
+
+.collapses-pagamentos .collapse {
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+}
+
+p.title-bol-pix {
+    font-weight: 600;
+}
+
+.collapses-pagamentos ul {
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+.collapses-pagamentos ul li {
+    list-style: outside;
+    position: relative;
+    left: 16px;
+}
+
+.collapses-pagamentos input.form-control {
+    font-size: 12px;
+}
+
+.container{
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 2rem 0;
+    border-radius: 0 10px 10px 10px;
+}
+
+.container form{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, blueviolet, deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, #000,  #cee6f2);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+    border-radius: 15px;
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, #000,  #cee6f2);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+div#collapseOneCard {
+    padding: 0;
+    border-radius: 0px 10px 10px 10px;
+}
+
+div#collapseTwoCard {
+    border-radius: 0px 10px 10px 10px; 
+}
+
+.menu-cartoes {
+    display: flex;
+    align-items: center;
+}
+
+.menu-cartoes button {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    top: 1px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-cartoes button:hover {
+    transition: .3s;
+    border-color: rgba(0, 0, 0, 0.075);
+}
+
+.menu-cartoes button.ativado {
+    transition: .3s;
+    border-color: #ced4da;
+}
+
+.menu-cartoes button, .container form .inputBox input, .container form .inputBox select, .container form .inputBox span {
+    font-size: .7rem;
+}
+
+.container form .inputBox input, .container form .inputBox select, #collapseTwoCard .inputBox select, #collapseCripto .inputBox select {
+    height: 37px;
+    padding: 9px 5px 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgb(0 0 0 / 20%);
+    -moz-box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 2px 0px rgb(0 0 0 / 20%);    
+}
+
+#collapseTwoCard .inputBox, #collapseCripto .inputBox {
+    display: grid;
+    font-size: .7rem;
+}
+
+#collapseTwoCard .inputBox select, #collapseCripto .inputBox select {
+    border: 1px solid rgb(206 212 218);
+}
+
+.area-cartoesduplos {
+    display: flex;
+}
+
+.area-cartoesduplos {
+    display: flex;
+    gap: 1rem;
+}
+
+.area-cartoesduplos .input-group {
+    margin-bottom: 10px;
+}
+
+.area-cartoesduplos .form-card1, .area-cartoesduplos .form-card2 {
+    width: 100%;
+}
+
+.area-cartoesduplos .divisoria-cards {
+    width: 1px;
+    height: 315px;
+    background-color: rgb(206 212 218);
+    position: relative;
+    top: 45px;
+}
+
+.area-cartoesduplos p {
+    font-size: .75rem;
+    margin-bottom: 5px;
+}
+
+#collapseCripto i {
+    font-size: 1rem;
+}
+
+#collapseCripto .inputBox span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card-prod-adicional p {
+    padding-left: 1rem;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.pequenas-info-footer {
+    font-size: 10px;
+}
+
+.pequenas-info-footer a:hover {
+    transition: .3s;
+    text-decoration: underline;
+}
+
+.pequenas-info-footer p:nth-child(1) {
+    margin: 10px 0;
+}
+
+.pequenas-info-footer p:nth-child(1) span {
+    font-weight: bolder;
+}
+
+.pequenas-info-footer p:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.pequenas-info-footer p:nth-child(3) {
+    margin-bottom: 1rem;
+} 
+
+.btn-comprar a {
+    background: rgb(124, 208, 99);
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid rgb(80, 178, 50);
+    box-shadow: rgb(0 0 0 / 10%) 0px -5px 0px inset;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-comprar a:hover {
+    transition: .3s;
+    background: rgb(80, 178, 50);
+}
+
+.cards-info {
+    padding: 0 1rem;
+}
+
+.item-card {
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 180px;
+    margin-bottom: 1rem;
+}
+
+.item-card span {
+    font-size: .85rem;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 7px;
+    font-style: italic;
+}
+
+.title-card span {
+    font-weight: 600;
+}
+
+.title-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.title-card img {
+    margin: 0 auto;
+}
+
+.container .card-container .front .flexbox {
+    gap: 10px;
+}
+
+.container .card-container .front .flexbox .box:nth-child(2) {
+    min-width: 65px;
+}
+
+.imagem-baixo {
+    width: calc(100% - 220px);
+}
+
+@media (max-width: 950px) {
+    div#collapseCartao .container form {
+        width: 100%;
+    }
+    div#collapseCartao .container {
+        padding: 1rem 0 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .conteudo-principal {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .cards-info {
+        padding: 0;
+    }
+    .item-card {
+        width: 100%;
+    }
+    .collapses-pagamentos ul {
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    div#collapseCartao .container {
+        padding: 0;
+        border-radius: 10px;
+    }
+    div#collapseOneCard {
+        padding-top: 1rem;
+    }
+    div#collapseOneCard, div#collapseTwoCard, .menu-cartoes button {
+        border-radius: 10px;
+    }
+    .container .card-container {
+        height: 150px;
+        width: 230px;
+    }
+    .container .card-container .front .flexbox .box:nth-child(2) {
+        min-width: 45px;
+    }
+    .container .card-container .front .flexbox {
+        position: relative;
+        top: -10px;
+    }
+    .container .card-container .front .image img {
+        height: 20px;
+    }
+    .container .card-container .front .card-number-box {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+    .container .card-container .front .flexbox .box {
+        font-size: 10px;
+    }
+    .container .card-container .back .stripe {
+        margin: 5px 0;
+        height: 10px;
+    }
+    .container .card-container .back .box span {
+        font-size: 10px;
+    }
+    .container .card-container .back .box .cvv-box {
+        height: 0;
+        font-size: 14px;
+        padding: 5px 10px 25px;
+    }
+    .container .card-container .back .box img {
+        margin-top: 15px;
+        height: 20px;
+    }
+
+    .area-cartoesduplos {
+        flex-direction: column;
+    }
+    .card-prod-adicional .area-produto {
+        margin-bottom: 10px;
+    }
+    .area-cartoesduplos .divisoria-cards, .area-seta {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    header {
+        height: 60px !important;
+    }
+    main {
+        margin-top: 60px !important;
+    }
+    header svg {
+        width: 1rem;
+    }
+    header .temp {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+    .input-tel {
+        flex-direction: column;
+        gap: 0;
+    }
+    .input-tel .input-group:nth-child(1) {
+        max-width: 100%;
+    }
+    .menu-pagamentos .form-check {
+        height: 50px;
+    }
+    .menu-pagamentos img {
+        width: 25px;
+    }
+    .menu-cartoes button {
+        font-size: 0.6rem;
+    }
+    div#collapseCartao {
+        padding: 0px;
+        border: none;
+    }
+    .menu-cartoes button img {
+        width: 15px;
+    }
+    .card-prod-adicional .area-produto label {
+        flex-direction: column;
+        font-size: .7rem;
+    }
+    .card-prod-adicional p {
+        padding: 0 1rem;
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 340px) {
+    header .chamada {
+        font-size: .45rem;
+    }
+    .menu-pagamentos .form-check {
+        width: 100%;
+        height: 40px;
+        font-size: 9px;
+    }
+    div#collapseCartao .container {
+        padding-top: 5px;
+    }
+    .container .card-container {
+        height: 125px;
+        width: 200px;
+    }
+    .container .card-container .front .image img {
+        height: 15px;
+    }
+    .container .card-container .front {
+        padding: 10px 15px;
+    }
+    .container .card-container .front .card-number-box {
+        font-size: 12px;
+    }
+    .container form .inputBox span {
+        font-size: .55rem;
+    }
+    .container form .flexbox {
+        gap: 5px;
+    }
+    .container .card-container .back .box .cvv-box {
+        margin: 0;
+        padding: 0px 10px 20px;
+    }
+    .container .card-container .back .box img {
+        margin-top: 0;
+    }
+}
+
+
+
+
+
