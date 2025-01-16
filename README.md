@@ -22,6 +22,8 @@ Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já d
 
 ### Projetos Mais Elaborados
 
+- **Projeto Voe Concursos**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-voe-concursos/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-voe-concursos/)
+
 - **Projeto Option**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-option/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-option/)
 
 
