@@ -1587,3 +1587,40 @@ span.labelCustom {
         margin-top: 0.5rem !important;
     }
 }
+
+/* Header Pags */
+.header-git {
+    margin-bottom: 1.5rem;
+}
+
+.header-git a.btn.dropdown-toggle {
+    background-color: #fe7941;
+    border-color: #fe7941;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.header-git a.btn.dropdown-toggle:hover {
+    transition: .2s;
+    background-color: #ff804a;
+}
+
+.header-git a.dropdown-item {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.message-header-git {
+    background-color: #fe794145;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
