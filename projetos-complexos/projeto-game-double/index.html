@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Double</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="box-game-crash">
+            <div class="box-game">
+                <div class="game">
+                    <div class="area-game-controller">
+                        <div class="game-controller">
+                            <div class="area-header-controller">
+                                <div class="tag-border left">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <div class="header-controller">
+                                    <button type="button" id="btnNormal" class="active">Normal</button>
+    
+                                    <button type="button" id="btnAuto">Auto</button>
+                                </div>
+
+                                <div class="tag-border right">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>          
+
+                            <div class="controller-right">
+                                <div class="buttons-controller">
+                                    <div class="buttons-controller-left">
+                                        <div class="input-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="inputQuantia" placeholder="Quantia">
+                                                <label for="inputQuantia">Quantia</label>
+                                            </div>
+        
+                                            <span class="input-group-text">R$</span>
+                                        </div>
+                                        
+                                        <div class="buttons-double">
+                                            <button type="button" class="double">½</button>
+        
+                                            <button type="button" class="double">2x</button>
+                                        </div>
+                                    </div>           
+                                    
+                                    <div class="buttons-controller-right">
+                                        <div class="input-group game-auto" style="display: none;">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="inputTotalApostas" placeholder="TotalApostas">
+                                                <label for="inputTotalApostas">Total Apostas</label>
+                                            </div>
+        
+                                            <span class="input-group-text auto-retirar">
+                                                <i class="fa-solid fa-infinity"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fortune-double-select-color">
+                                    <div class="select-color__line"></div>
+
+                                    <span>Selecionar Cor</span>
+
+                                    <div class="select-color__line"></div>
+                                </div>
+                                
+                                <div class="game-mode">
+                                    <div class="mode-normal">
+                                        <div class="box-button red">
+                                            <button type="button" class="btn-start-game btn-default bet-red">
+                                                <span class="text-default">Começar o Jogo</span>
+                                                <span class="text-tag">X2</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="box-button yellow">
+                                            <button type="button" class="btn-start-game btn-default bet-yewllow">
+                                                <span class="text-default">Começar o Jogo</span>
+                                                <img src="img/coin-bet.svg" alt="image">
+                                            </button>
+                                        </div>
+
+                                        <div class="box-button blue">
+                                            <button type="button" class="btn-start-game btn-default bet-blue">
+                                                <span class="text-default">Começar o Jogo</span>
+                                                <span class="text-tag">X2</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fortune-double-select-color">
+                                    <div class="select-color__line"></div>
+
+                                    <span>Apostando em ouro você pode ganhar até x250</span>
+
+                                    <div class="select-color__line"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="options-game">
+                            <div class="left">
+                                <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tela Full Screen">
+                                    <i class="fa-solid fa-expand"></i>
+                                </button>
+                            </div>
+        
+                            <div class="right">
+                                <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Som">
+                                    <i class="fa-solid fa-volume-high"></i>
+        
+                                    <i class="fa-solid fa-volume-off" style="display: none;"></i>
+                                </button>
+
+                                <div class="btn-group dropup dropdown-menu-end">
+                                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" title="Informações">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                    </button>
+        
+                                    <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#modalTutorialRegras" data-bs-toggle="modal" data-bs-target="#modalTutorialRegras" id="btnTutorial">Tutorial</a>
+                                            </li>
+                                            <li>
+                                                <a href="#modalTutorialRegras" data-bs-toggle="modal" id="btnRegras">Regras</a>
+                                            </li>
+                                        <li>
+                                            <a href="#">Justiça</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-game">
+                        <div class="top-game">
+                            <div class="game-inner">
+                                <div class="inner-canva">
+                                    <div class="timer-game">
+                                        <div class="game-progress-bar play" style="display: none;">
+                                            <div class="background-play"></div>
+                                            <span class="text-bar">Girando em 15:00</span>
+                                        </div>
+
+                                        <div class="game-progress-bar spin" style="display: none;">
+                                            <span class="text-bar">Girando...</span>
+                                        </div>
+
+                                        <div class="game-progress-bar finished">
+                                            <div class="background-finished"></div>
+                                            <span class="text-bar">Double Girou Dourado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="area-slider-game">
+                                <div class='roulette-wrapper'>
+                                    <div class='selector'>
+                                        <img src="img/selector.svg" alt="image">
+                                    </div>
+
+                                    <div class='wheel'></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-game">
+                            <h3>Giros Anteriores</h3>
+
+                            <div class="area-history-roulette">
+                                <ul class="roulette-history">
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-yellow.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-yellow.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-yellow.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-yellow.png" alt="image">
+                                        </button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-red.png" alt="image">
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                            <img src="img/card-blue.png" alt="image">
+                                        </button>
+                                    </li>
+                                </ul>
+
+                                <li>
+                                    <button type="button" class="list-history-full" data-bs-toggle="modal" data-bs-target="#modalHistoricoGame">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </button>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="area-table-game accordion accordion-flush" id="accordionFlushGame">
+                <div class="headers-accordion">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button id="btnAccordionAposta" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                            Apostas
+                        </button>
+                    </h2>
+            
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button id="btnAccordionDescricao" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Descrição do Jogo
+                        </button>
+                    </h2>
+                </div>
+                
+                <div class="content-item-acc">
+                    <div class="accordion-item">
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushGame">
+                            <div class="row">
+                                <div class="col-lg-4 col-xs-12">
+                                    <div class="item-game-column red">
+                                        <div class="top"></div>
+                                        
+                                        <div class="content">
+                                            <div class="content-inner">
+                                                <div class="header-column">
+                                                    <div class="tag-header">
+                                                        <span>ganhe até</span>
+                                                        <p class="item-game-column-multiplier">
+                                                            X2
+                                                        </p>
+                                                    </div>
+                                                
+                                                    <div class="fortune-double-total-bets">
+                                                        <span>Total apostas</span>
+                                                
+                                                        <div class="counter">
+                                                            <span class="">R$&nbsp; 794,86</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="entries">
+                                                    <div class="entries-header">
+                                                        <div>Usuário</div>
+                                                        <div>Quantia</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#modalHistoryUser" data-bs-toggle="modal">anderson2714</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;119,99</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#modalHistoryUser" data-bs-toggle="modal">Everton</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;39,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Gleiciel</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;20,02</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Day</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;20,02</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Emerson82</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;16,01</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">@Zezin_Da_Naike</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;11,26</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Smoke044</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;11,00</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Guuh</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;9,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Rafael Rogério </a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;6,25</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Prosperidade 🌻🌵</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;5,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">+25 Jogadores</div>
+                                                        <div class="amount"><span>R$&nbsp;42,11</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bottom"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-xs-12">
+                                    <div class="item-game-column yellow">
+                                        <div class="top"></div>
+                                        
+                                        <div class="content">
+                                            <div class="content-inner">
+                                                <div class="header-column">
+                                                    <div class="tag-header">
+                                                        <span>ganhe até</span>
+                                                        <p class="item-game-column-multiplier">
+                                                            <span class="fortune-double-column-gold-x">X</span>
+                                                            250
+                                                        </p>
+                                                    </div>
+                                                
+                                                    <div class="fortune-double-total-bets">
+                                                        <span>Total apostas</span>
+                                                
+                                                        <div class="counter">
+                                                            <span class="">R$&nbsp; 794,86</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="entries">
+                                                    <div class="entries-header">
+                                                        <div>Usuário</div>
+                                                        <div>Quantia</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#modalHistoryUser" data-bs-toggle="modal">anderson2714</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;119,99</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#modalHistoryUser" data-bs-toggle="modal">Everton</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;39,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Gleiciel</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;20,02</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Day</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;20,02</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Emerson82</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;16,01</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">@Zezin_Da_Naike</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;11,26</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Smoke044</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;11,00</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Guuh</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;9,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Rafael Rogério </a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;6,25</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Prosperidade 🌻🌵</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;5,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">+25 Jogadores</div>
+                                                        <div class="amount"><span>R$&nbsp;42,11</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bottom"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-xs-12">
+                                    <div class="item-game-column blue">
+                                        <div class="top"></div>
+
+                                        <div class="content">
+                                            <div class="content-inner">
+                                                <div class="header-column">
+                                                    <div class="tag-header">
+                                                        <span>ganhe até</span>
+                                                        <p class="item-game-column-multiplier">
+                                                            X2
+                                                        </p>
+                                                    </div>
+                                                
+                                                    <div class="fortune-double-total-bets">
+                                                        <span>Total apostas</span>
+                                                
+                                                        <div class="counter">
+                                                            <span class="">R$&nbsp; 794,86</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="entries">
+                                                    <div class="entries-header">
+                                                        <div>Usuário</div>
+                                                        <div>Quantia</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#modalHistoryUser" data-bs-toggle="modal">anderson2714</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;119,99</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#modalHistoryUser" data-bs-toggle="modal">Everton</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;39,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Gleiciel</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;20,02</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Day</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;20,02</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Emerson82</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;16,01</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">@Zezin_Da_Naike</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;11,26</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Smoke044</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;11,00</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Guuh</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;9,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Rafael Rogério </a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;6,25</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">
+                                                            <div class="user-rank">
+                                                                <i class="fa-solid fa-crown"></i>
+                                                            </div>
+                                            
+                                                            <a class="user-profile-link" href="#">Prosperidade 🌻🌵</a>
+                                                        </div>
+                                            
+                                                        <div class="amount">R$&nbsp;5,98</div>
+                                                    </div>
+                                            
+                                                    <div class="entry">
+                                                        <div class="username">+25 Jogadores</div>
+                                                        <div class="amount"><span>R$&nbsp;42,11</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="accordion-item">
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushGame">
+                            <div class="area-desc-game">
+                                <h2 class="title">Fortune Double</h2>
+
+                                <div class="content-desc">
+                                    <div class="left-desc">
+                                        <img src="img/image-game.png" alt="image">
+                                    </div>
+
+                                    <div class="right-desc">
+                                        <ul class="tags-desc">
+                                            <li>Blaze Originals</li>
+                                            <li>New</li>
+                                            <li>Popular</li>
+                                        </ul>
+
+                                        <div class="desc-small" id="descSmall">
+                                            <p>Prepare-se para descobrir as cores que trazem prosperidade em Fortune Double! Este Blaze Original levará você diretamente à Ásia para uma partida de dados com jogadores do mundo inteiro e um Dealer, digamos, inusitado: o icônico panda da sorte! Com gráficos coloridos e detalhados e uma trilha sonora oriental criando uma atmosfera de festa, este jogo criado pela Blaze fará você rir, vibrar e se surpreender a cada rodada. Desfrute de Multiplicadore...</p>
+
+                                            <a class="btnReadDefault" id="readMore">Leia Mais</a>
+                                        </div>
+
+                                        <div class="desc-large" id="descLarge" style="display: none;">
+                                            <p>
+                                                Prepare-se para descobrir as cores que trazem prosperidade em <strong>Fortune Double</strong>! Este Blaze
+                                                Original levará você diretamente à Ásia para uma partida de dados com jogadores do mundo inteiro e um Dealer,
+                                                digamos, inusitado: o icônico panda da sorte!
+                                            </p>
+                                            
+                                            <p>
+                                                Com gráficos coloridos e detalhados e uma trilha sonora oriental criando uma atmosfera de festa, este jogo criado
+                                                pela Blaze fará você rir, vibrar e se surpreender a cada rodada. Desfrute de Multiplicadores, faça apostas
+                                                múltiplas e acompanhe cada jogada em tempo real.
+                                            </p>
+                                            
+                                            <p>
+                                                Venha se divertir com <strong>Fortune Double</strong> na Blaze e conheça a fofura e sagacidade do panda mais
+                                                sortudo do momento!
+                                            </p>
+                                            
+                                            <h2>Como Jogar Fortune Double?</h2>
+                                            
+                                            <p>
+                                                Se você já jogou <strong>Double</strong> ou jogos de Roleta, com certeza vai pegar o jeito rápido. O objetivo de
+                                                <strong>Fortune Double</strong> é acertar o resultado que será sorteado na tela 一 podendo apostar em três
+                                                opções. Cada vitória oferece um retorno baseado em um Multiplicador específico, trazendo ainda mais emoção à
+                                                partida!
+                                            </p>
+                                            
+                                            <p>
+                                                Confira a seguir o passo a passo completo para usar o poder das cores em <strong>Fortune Double</strong>:
+                                            </p>
+                                            
+                                            <h3>1. Inicie sua jornada</h3>
+                                            
+                                            <p>
+                                                Espere <strong>Fortune Double</strong> carregar e escolha uma sala para jogar. Em seguida, você pode clicar no
+                                                ícone <strong>i</strong> para aprender a dinâmica e as regras do jogo, além de como o Sistema Provably Fair traz
+                                                ainda mais segurança e transparência à partida 一 não se preocupe, explicaremos o que é isso mais adiante!
+                                            </p>
+                                            
+                                            <p>
+                                                Não há Modo Demo em <strong>Fortune Double</strong>, mas não se preocupe: é possível assistir às partidas em
+                                                tempo real antes de jogar. Por isso, caso prefira, acompanhe algumas rodadas antes de colocar dinheiro de
+                                                verdade!
+                                            </p>
+                                            
+                                            <h3>2. Ajuste sua aposta</h3>
+                                            
+                                            <p>
+                                                Agora é hora de escolher quanto apostar em cada rodada, podendo ser qualquer valor entre € 0,20 e € 3.000. Caso
+                                                você queira fazer uma aposta múltipla, ou seja, em mais de um resultado, o limite é de € 4.000.
+                                            </p>
+                                            
+                                            <p>
+                                                Preencha o campo <strong>Quantia</strong>, com o ícone <strong>½</strong> servindo para dividir o valor pela
+                                                metade e <strong>2x</strong> para dobrá-lo. E não se esqueça de sempre jogar com responsabilidade e bom senso,
+                                                nunca apostando mais do que seu orçamento permite!
+                                            </p>
+                                            
+                                            <h3>3. Escolha sua cor da sorte</h3>
+                                            
+                                            <p>
+                                                Depois de definir o valor a ser apostado, é hora de efetivar a sua aposta. São três opções: vermelho, roxo e
+                                                amarelo. Enquanto as duas primeiras possuem um Multiplicador 2x, o da terceira é aleatório.
+                                            </p>
+                                            
+                                            <p>
+                                                Para definir em quem apostar, basta clicar na opção. Caso prefira, é possível selecionar mais de uma opção 一
+                                                desde que antes do cronômetro na barra superior da tela zerar.
+                                            </p>
+                                            
+                                            <h3>4. Fique de olho nas apostas e acompanhe a partida</h3>
+                                            
+                                            <p>
+                                                <strong>Fortune Double</strong> é uma experiência online onde você e jogadores de todo o planeta apostam no
+                                                desfecho de cada rodada. Por isso, é possível acompanhar todas as apostas da rodada nos placares abaixo da tela
+                                                一 disponíveis na aba <strong>Apostas</strong>.
+                                            </p>
+                                            
+                                            <p>
+                                                Observe a barra roxa, localizada no topo da tela. Quando a contagem de 18 segundos zerar, a roleta vai girar e
+                                                mostrar o resultado. Caso você não faça uma aposta durante o período, precisará esperar o começo da próxima
+                                                rodada.
+                                            </p>
+                                            
+                                            <h3>5. Colete seus ganhos</h3>
+                                            
+                                            <p>
+                                                Acertou o resultado? Os ganhos serão creditados automaticamente ao seu saldo na Blaze, localizado no canto
+                                                superior direito da nossa plataforma. Não esqueça de sempre ler as regras de saque para não ter surpresas
+                                                desagradáveis, jovem panda!
+                                            </p>
+                                            
+                                            <h3>6. Continue jogando</h3>
+                                            
+                                            <p>
+                                                Gostou de <strong>Fortune Double</strong>? Continue desfrutando da experiência por quanto tempo desejar. Não
+                                                esqueça de sempre jogar com responsabilidade para garantir uma experiência segura, saudável e divertida!
+                                            </p>
+                                            
+                                            <h2>Recursos Bônus de Fortune Double</h2>
+                                            
+                                            <p>
+                                                O jogo base de <strong>Fortune Double</strong> já é divertido por si só, trazendo dinamismo e emoção à
+                                                experiência. No entanto, o jogo possui funcionalidades especiais que trarão ainda mais prosperidade à sua
+                                                experiência:
+                                            </p>
+                                            
+                                            <h3>Multiplicador Panda Dourado</h3>
+                                            
+                                            <p>
+                                                Diferentemente das cores vermelha e roxa, o amarelo possui potencial de vitórias ainda maior graças ao
+                                                Multiplicador Panda Dourado. Quando o resultado for este, <strong>Fortune Double</strong> ativa um Multiplicador
+                                                aleatório que varia entre 8.5x e 250x 一 sendo aplicado ao valor apostado!
+                                            </p>
+                                            
+                                            <h3>Apostas Múltiplas</h3>
+                                            
+                                            <p>
+                                                Como dito anteriormente, você pode apostar em mais de um resultado por rodada. Basta clicar em mais de uma cor
+                                                durante a contagem regressiva e esperar o panda sortear a escolhida.
+                                            </p>
+                                            
+                                            <p>E atenção: Apostas Múltiplas elevam o risco do jogo. Por isso, pense bem antes de fazê-las!</p>
+                                            
+                                            <h3>Jogo Automático</h3>
+                                            
+                                            <p>
+                                                Caso você prefira apenas observar a ação, o Jogo Automático permite que <strong>Fortune Double</strong> seja
+                                                jogado automaticamente. Para isso, clique em <strong>Auto</strong> e preencha o valor em
+                                                <strong>Quantia</strong>. Em seguida, escolha o número de rodadas em <strong>Total Apostas</strong> 一 não
+                                                colocar nada no campo fará a funcionalidade ficar ativa indefinidamente.
+                                            </p>
+                                            
+                                            <h2>Fortune Double é comprovadamente justo?</h2>
+                                            
+                                            <p>
+                                                Como dito anteriormente, <strong>Fortune Double</strong> usa o Sistema Provably Fair para garantir segurança e
+                                                transparência às partidas 一 assim como todos os Blaze Originals. Ou seja, o jogo usa criptografia para garantir
+                                                que nenhuma partida seja manipulada e permite que você confira a integridade de cada rodada.
+                                            </p>
+                                            
+                                            <p>
+                                                Esta tecnologia funciona com o uso de <em>Seeds</em> para identificar jogadores e servidor, além de
+                                                <em>Hashs</em> para a geração dos eventos aleatórios. Para isso, <strong>Fortune Double</strong> usa Blockchain
+                                                e gera a Seed do Servidor antes de saber a do cliente 一 ou seja, não há como saber a dos jogadores previamente e
+                                                manipular resultados.
+                                            </p>
+                                            
+                                            <p>
+                                                Selecione o ícone <strong>i</strong> e clique em <strong>Justiça</strong> para ser direcionado à página de
+                                                Provably Fair de <strong>Fortune Double</strong>. Além disso, você pode ver todos os resultados em <strong>Giros Anteriores</strong>, na barra inferior do jogo.
+                                            </p>
+                                            
+                                            <p>
+                                                É possível clicar nos ícones com resultado de cada partida para conferir os vencedores, Multiplicadores e chave
+                                                identificadora da partida. Para ver o histórico completo do jogo, selecione <strong>Estatísticas</strong>, a
+                                                direita, e escolha o período desejado no calendário.
+                                            </p>
+                                            
+                                            <h2>Sobre Fortune Double</h2>
+                                            
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                            
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Jogo</td>
+                                                        <td>Fortune Double</td>
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td>Provedor</td>
+                                                        <td>Blaze Originals</td>
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td>Data de Lançamento</td>
+                                                        <td>2024</td>
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td>Gênero</td>
+                                                        <td>Roleta</td>
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td>Recursos Bônus</td>
+                                                        <td>Multiplicador Panda Dourado, Apostas Múltiplas, Jogo Automático</td>
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td>Aposta Mínima</td>
+                                                        <td>€ 0,20</td>
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td>Aposta Máxima</td>
+                                                        <td>€ 3.000 (Aposta Única) / € 4.000 (Aposta Total)</td>
+                                                    </tr>
+                                            
+                                                    <tr>
+                                                        <td>Vitória Máxima</td>
+                                                        <td>250x</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                            <h4><strong>Pronto para desfrutar da prosperidade? Jogue Fortune Double na Blaze e prepare-se para descobrir qual é a sua cor da sorte!</strong></h4>
+
+                                            <a class="btnReadDefault" id="readLess">Leia Menos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Histórico Game -->
+    <div class="modal fade" id="modalHistoricoGame" tabindex="-1" aria-labelledby="modalHistoricoGameLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modalHistoricoGameLabel">Histórico do Double</h1>
+                </div>
+
+                <div class="modal-body">
+                    <div class="area-itens-historico">
+                        <div class="list-history">
+                            <ul>
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-red.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-yellow.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">13,75x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-blue.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-red.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-yellow.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">13,75x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-blue.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-red.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-yellow.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">13,75x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-blue.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-red.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-yellow.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">13,75x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-blue.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-red.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-yellow.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">13,75x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-blue.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-yellow.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">13,75x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-red.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#itemModalHistory">
+                                        <img src="img/card-blue.png" alt="image">
+                                    </button>
+
+                                    <p class="text-history-item">2x</p>
+
+                                    <div class="history-item-date">
+                                        <p>15/02/2024</p>
+                                        <p>14:05:34</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pagination-historico">
+                        <p>Página 1 de 10</p>
+
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+                                    </a>
+                                </li>
+
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Histórico Rodada -->
+    <div class="modal modal-history-default fade" id="itemModalHistory" tabindex="-1" aria-labelledby="itemModalHistoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <h1 class="modal-title" id="itemModalHistoryLabel">Fortune Double</h1>
+                    
+                    <h2 class="modal-title">#pJ1o4wNdkd jogada em 14/02/2024 3:48 pm</h2>
+                </div>
+
+                <div class="modal-body">
+                    <div class="area-history">
+                        <p class="text-history">3.20X</p>
+
+                        <img src="img/image-history.png" alt="image" width="100%" height="auto">
+                    </div>
+
+                    <div class="input-group input-history">
+                        <input type="text" id="rodadaId" class="form-control" value="ff585e80627979da2f9a15ce8c3142ba1d16b5e384f17ce6766be892c059a9fe" readonly>
+
+                        <button type="button" id="copyButton">
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="verify-history">Verificar Aposta</a>
+
+                    <div class="table-responsive">
+                        <table class="table-game">
+                            <thead>
+                                <tr>
+                                    <td>Usuário</td>
+                                    <td>Aposta</td>
+                                    <td>Cor</td>
+                                    <td>Lucro</td>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>
+                                            <i class="fa-solid fa-crown"></i>
+                                            Nome do Usuário
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 25,00</td>
+                                    <td>
+                                        <div class="item-color-history red"></div>
+                                    </td>
+                                    <td style="color: #06e385;">R$ 21,80</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>
+                                            <i class="fa-solid fa-crown"></i>
+                                            Nome do Usuário
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 25,00</td>
+                                    <td>
+                                        <div class="item-color-history yellow"></div>
+                                    </td>
+                                    <td style="color: #06e385;">R$ 21,80</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>
+                                            <i class="fa-solid fa-crown"></i>
+                                            Nome do Usuário
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 25,00</td>
+                                    <td>
+                                        <div class="item-color-history blue"></div>
+                                    </td>
+                                    <td style="color: #f9305b;">R$ -21,80</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Histórico User -->
+    <div class="modal modal-history-default fade" id="modalHistoryUser" tabindex="-1" aria-labelledby="modalHistoryUser" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <h1 class="modal-title" id="itemModalHistoryLabel">Emerson82</h1>
+                    
+                    <h2 class="modal-title">Cadastrado em 3/12/2022</h2>
+                </div>
+
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table-game">
+                            <thead>
+                                <tr>
+                                    <td>Jogo</td>
+                                    <td>Apostas</td>
+                                    <td>Ganhos</td>
+                                    <td>Perdas</td>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Gates Of Olympus
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Sweet Bonanza
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Sweet Alchemy Bingo
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Fortune Tiger
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Book Of Blaze
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Double
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Sweet Bonanza Xmas
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Fortune Rabbit
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Blaze Of Olympus
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Fruit Party
+                                    </td>
+
+                                    <td>514410</td>
+                                    <td>158743</td>
+                                    <td>355667</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Histórico Tutorial e Regras -->
+    <div class="modal fade" id="modalTutorialRegras" tabindex="-1" aria-labelledby="modalTutorialRegrasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <a href="#" id="titleTutorial">Tutorial</a>
+
+                    <a href="#" id="titleRegras">Regras</a>
+                </div>
+
+                <div class="modal-body">
+                    <div class="area-tutorial" id="areaTutorial">
+                        <div class="etapa one" style="display: block;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa1.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Introdução
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Double é um jogo em que você deve escolher entre 3 cores, uma delas pode trazer um grande prêmio.
+                            </p>
+                        </div>
+
+                        <div class="etapa two" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa2.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Valor da Aposta
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Escolha um valor e faça sua aposta.
+                            </p>
+                        </div>
+
+                        <div class="etapa three" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa3.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Vitória
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Se você escolher a cor certa, você ganhará 2x ou até 250x o valor da sua aposta.
+                            </p>
+                        </div>
+
+                        <div class="etapa four" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa4.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Panda Dourado
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Quando a roda para no panda dourado, um multiplicador aleatório será revelado, podendo ser de 8,5x a 250x!
+                            </p>
+                        </div>
+
+                        <div class="etapa five" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa5.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Derrota
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                No entanto, se você escolher a cor errada, perderá sua aposta.
+                            </p>
+                        </div>
+
+                        <ul class="list-tutorial">
+                            <li>
+                                <button type="button" id="btnEtapaOne" class="active"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaTwo"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaThree"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaFour"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaFive"></button>
+                            </li>
+                        </ul>
+
+                        <button type="button" id="nextEtapa">
+                            Próximo Passo
+                        </button>
+                    </div>
+
+                    <div class="area-regras" id="areaRegras">
+                        <ol>
+                            <li>
+                                Os jogadores podem fazer múltiplas apostas por rodada.
+                            </li>
+
+                            <li>
+                                As apostas em Vermelho e Roxo resultam em um pagamento de 2x.
+                            </li>
+
+                            <li>
+                                Aposta em Ouro concede um multiplicador aleatório variando de 8,5x a 250x.
+                            </li>
+
+                            <li>
+                                Todos os usuários na sala recebem o mesmo multiplicador gerado aleatoriamente.
+                            </li>
+
+                            <li>
+                                Cada sala opera com uma geração de Hash única, garantindo resultados variados nas rodadas.
+                            </li>
+
+                            <li>
+                                Cada sala tem um limite máximo de apostas total de aproximadamente 4.000 EUR.
+                            </li>
+
+                            <li>
+                                As apostas individuais possuem o limite de 3.000 EUR.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script src="js/roulette.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

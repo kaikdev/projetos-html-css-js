@@ -32,6 +32,8 @@ Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já d
 
 - **Projeto Game Crash**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-game-crash/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-game-crash/)
 
+- **Projeto Game Double**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-game-double/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-game-double/)
+
 
 ### Projetos Simples
 
