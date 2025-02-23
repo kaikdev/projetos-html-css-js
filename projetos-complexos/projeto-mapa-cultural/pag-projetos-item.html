@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mapa Cultural do Ceará</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+  <link href="splide-4.1.3/dist/css/themes/splide-default.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header id="header">
+    <a id="logo" href="index.html">
+      <img src="img/logo-mapacultural-ce.png" alt="Mapa Cultural" height="35px">
+    </a>
+
+    <nav id="nav">
+      <div class="user-on">
+        <li class="nav-item dropdown user-on mobile">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="painel.html">
+                Painel de Controle
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="meuperfil.html">
+                Meu Perfil
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-agentes.html">
+                Meus Agentes
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-eventos.html">
+                Meus Eventos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-espacos.html">
+                Meus Espaços
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-projetos.html">
+                Meus Projetos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-oportunidades.html">
+                Minhas Oportunidades
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-inscricoes.html">
+                Minhas Inscrições
+              </a>
+            </li>
+
+            <li class="li-sair">
+              <a class="dropdown-item" href="#">
+                Sair
+              </a>
+            </li>
+          </ul>
+        </li>
+      </div>
+
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburger"></span>
+      </button>
+
+      <ul id="menu" role="menu">
+        <li class="eventos">
+          <a href="pag-eventos.html" class="item-nav">
+            <span>Eventos</span>
+            <i class="fa-regular fa-calendar"></i>
+          </a>
+        </li>
+
+        <li class="espacos">
+          <a href="pag-espacos.html" class="item-nav">
+            <span>Espaços</span>
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </li>
+
+        <li class="agentes">
+          <a href="pag-agentes.html" class="item-nav">
+            <span>Agentes</span>
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+
+        <li class="projetos">
+          <a href="pag-projetos.html" class="item-nav">
+            <span>Projetos</span>
+            <i class="fa-solid fa-list-ul"></i>
+          </a>
+        </li>
+
+        <li class="oportunidades">
+          <a href="pag-oportunidades.html" class="item-nav">
+            <span>Oportunidades</span>
+            <i class="fa-regular fa-lightbulb"></i>
+          </a>
+        </li>
+
+        <li class="entrar user-off">
+          <a href="#" class="item-nav login">
+            <span>Entrar</span>
+            <i class="fa-solid fa-lock"></i>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown user-on desk">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="painel.html">
+                Painel de Controle
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="meuperfil.html">
+                Meu Perfil
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-agentes.html">
+                Meus Agentes
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-eventos.html">
+                Meus Eventos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-espacos.html">
+                Meus Espaços
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-projetos.html">
+                Meus Projetos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-oportunidades.html">
+                Minhas Oportunidades
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-inscricoes.html">
+                Minhas Inscrições
+              </a>
+            </li>
+
+            <li class="li-sair">
+              <a class="dropdown-item" href="#">
+                Sair
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="img/logo-org-ceara.png" alt="Governo do Ceará" height="25px">
+          </a>
+        </li>
+
+        <li class="icons-tol">
+          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-title="Sobre o Mapa Cultural do Ceará">
+            <i class="fa-solid fa-circle-info"></i>
+          </a>
+        </li>
+
+        <li class="icons-tol">
+          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-title="Como usar o Mapa Cultural">
+            <i class="fa-solid fa-circle-question"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="home-item">
+    <div class="item-lista projetos">
+      <div class="banner-item">
+        <img src="img/banner-item.png" alt="Banner de Fundo" width="100%">
+      </div>
+
+      <a class="link-evento">
+        <h2 class="title-lista">Cururu Skate e Rap - A batalha.</h2>
+
+        <p class="subtitle-lista">Batalha de mc's e evento cultural.</p>
+      </a>
+
+
+      <div class="box-infoslista">
+        <div class="left">
+          <img src="img/imagem-evento.png" alt="Imagem evento" width="120px">
+
+          <div class="desc-evento">
+            <p>Batalha de rap que ocorre todas as quartas feiras no bairro da parangaba as 18 horas onde se reúnem entre
+              100 / 200 jovens de todas as faixas etárias e bairros de fortaleza, evento ocorre a 5 anos totalmente
+              independente e sem apoio.</p>
+
+            <ul>
+              <li>
+                <p>
+                  <span>Cururu Skate e RAP - A Batalha</span>
+                  Toda quarta-feira de 13 de outubro de 2021 a 27 de dezembro de 2023 às 18:00. GRÁTIS.
+                </p>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="right">
+          <li>
+            <p>Linguagem: <a href="#">Hip Hop</a></p>
+          </li>
+
+          <li>
+            <p>Classificação: <a href="#">Livre</a></p>
+          </li>
+
+          <li>
+            <p class="tags">
+              Tags:
+              <a href="#">Batalha</a>
+              <a href="#">Cultura</a>
+            </p>
+          </li>
+        </div>
+
+      </div>
+
+      <div class="box-infosite">
+        <p class="site">
+          SITE:
+          <a href="#">https://www.instagram.com/cururuskateerap/</a>
+        </p>
+
+        <p class="sociais">REDES SOCIAIS:</p>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/cururuskateerap/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UC-Ewywn3yDHh5kjwhj-5O2g">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Sobre
+            </button>
+          </h2>
+
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Total de Público:
+                <span>200</span>
+              </p>
+
+              <p>
+                Inscrições:
+                <span>GRATUITA.</span>
+              </p>
+
+              <p>
+                Classificação Etária:
+                <span>Livre</span>
+              </p>
+
+              <p>
+                Mais informações:
+                <span> (85) 98683-8935</span>
+              </p>
+
+              <p>
+                Acessibilidade:
+              </p>
+
+              <p>
+                Tradução para LIBRAS:
+                <span>Não</span>
+              </p>
+
+              <p>
+                Áudio Descrição:
+                <span>Não</span>
+              </p>
+
+              <p>
+                Preço:
+                <span>GRÁTIS</span>
+              </p>
+
+              <p>
+                Endereço:
+                <span>Rua Site, 777.</span>
+              </p>
+
+              <div class="footer-collapse-item">
+                <h2>Descrição</h2>
+
+                <p>
+                  Após episódios de violência no bairro jovens se reuniram na antiga pista de skate da Parangaba pra
+                  poder andar de skate ver amigos e conversar, e pela precariedade do local e falta de estrutura sempre
+                  tínhamos a necessidade de algo melhor pra podermos andar de skate e um ambiente saudável onde
+                  podessemos nos reunir da melhor forma, e de todas as formas tentamos uma reforma e nunca dava certo e
+                  por isso surgiu pelo peixe uma brilhante ideia de em meados de 2017 a partir da necessidade de cultura
+                  e de uma reforma na pista de skate da Parangaba surgia um projeto novo, onde seria juntado vários
+                  tipos de cultura num evento só, foi onde 3 amigos (peixe, Aurora e aryadne) se juntaram e tiveram a
+                  ideia de criar esse tal projeto que foi batizado de CURURU SKATE E RAP, cururu por ser o nome da pista
+                  de skate, skate por ser feito por um skatista e numa pista de skate e rap por ser um evento de rap, e
+                  o primeiro evento foi realizado na intenção de arrecadar dinheiro pra que na época fosse feita uma
+                  reforma na pista de skate, e no primeiro evento já foi reunido quase 150 pessoas, foi arrecadado
+                  dinheiro e assim foi feito o primeiro obstáculo na pista, e daí surgia uma ideia ainda maior, por ver
+                  a responsabilidade e a força que tínhamos criamos uma meta de realizarmos o evento todas as quartas
+                  feiras, e assim foi feito, com 2 caixas de som, 1 microfone ligado num gato, toda quarta feira se dava
+                  início a um sonho chamado Cururu skate e rap, evento totalmente independente sem apoio de nenhum tipo
+                  de autoridade totalmente de rua, evento onde se junta jovens de todas as partes da cidade e região
+                  metropolitana e até mesmo de outras cidades do estado, muitas vezes fazendo com o auxílio de uma
+                  caixinha de som ligada no Bluetooth e com a voz dos Mc's fazíamos a cultura acontecer no local, onde
+                  já foi realizado vários tipos de eventos entre eles aconteceram reggaes, intervenções teatrais,
+                  musicais, poesias e batalhas de rap, jovens entre 15/20 anos, crianças idosos e pessoas de todas as
+                  classes raças e gêneros, um espaço onde podemos sermos nós mesmos sem nos preocupar... Então na
+                  Parangaba todas as quartas feiras ao lado do ginásio poliesportivo da Parangaba fiquem a vontade
+                  cheguem e conheçam a cururu skate e rap.
+                </p>
+
+                <h2>Galeria</h2>
+
+                <section id="main-slider" class="splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fNz2JS2Ira0"
+                          title="YouTube video player" frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen></iframe>
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                    </ul>
+                    </ul>
+                  </div>
+                </section>
+
+                <section id="thumbnail-slider" class="splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fNz2JS2Ira0"
+                          title="YouTube video player" frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen></iframe>
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2.glbimg.com/QAAL0jul8rWQ-3hHn-5Jb_IV3Q8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/Z/F/C923T1TlORxpzmAb8lAg/ferraro.jpg"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqolgZ6mtqtEtYC3UhGxOtx_CdsdVX1n9c1NBHhh-DtKvvSklGXOOhlgvOfR2Q1MgmBdM&usqp=CAU"
+                          alt="Imagem Galeria">
+                      </li>
+                      <li class="splide__slide">
+                        <img
+                          src="https://s2-ge.glbimg.com/UqQKTS5RE8A2HaIanR5VvrYAXuY=/0x0:2000x1125/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/E/e/qlpPoHShOKYRck2jNTfA/fo7ij7ixgaagrj-.jfif"
+                          alt="Imagem Galeria">
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Responsáveis
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="responsavel">
+                <img
+                  src="https://mapacultural.secult.ce.gov.br/files/agent/103995/file/3930500/blob-2-5cf8977b4f5291952fb1b95102110a8d.png"
+                  alt="Imagem Responsável">
+
+                <div>
+                  <span>Publicado por</span>
+                  <a href="#">Matheus Rodrigues (Peixe)</a>
+                </div>
+              </div>
+
+              <p class="desc-resp">
+                Produtor cultural, fundador e organizador do projeto cultural Cururu Skate e Rap poeta desde os 15 anos,
+                MC e palestrante.
+              </p>
+
+              <div class="btns-resp">
+                <button type="button" class="btn btn-warning">Denunciar</button>
+
+                <button type="button" class="btn btn-success">Contato</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="splide-4.1.3/dist/js/splide.min.js"></script>
+
+  <script>
+    var main = new Splide('#main-slider', {
+      type: 'fade',
+      heightRatio: 0.5,
+      pagination: false,
+      arrows: false,
+      cover: true,
+    });
+
+    var thumbnails = new Splide('#thumbnail-slider', {
+      rewind: true,
+      fixedWidth: 104,
+      fixedHeight: 58,
+      isNavigation: true,
+      gap: 10,
+      focus: 'center',
+      pagination: false,
+      cover: true,
+      dragMinThreshold: {
+        mouse: 4,
+        touch: 10,
+      },
+      breakpoints: {
+        640: {
+          fixedWidth: 66,
+          fixedHeight: 38,
+        },
+      },
+    });
+
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  </script>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

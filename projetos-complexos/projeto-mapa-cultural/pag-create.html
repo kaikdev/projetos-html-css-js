@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mapa Cultural do Ceará</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header id="header">
+    <a id="logo" href="index.html">
+      <img src="img/logo-mapacultural-ce.png" alt="Mapa Cultural" height="35px">
+    </a>
+
+    <nav id="nav">
+      <div class="user-on">
+        <li class="nav-item dropdown user-on mobile">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="painel.html">
+                Painel de Controle
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="meuperfil.html">
+                Meu Perfil
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-agentes.html">
+                Meus Agentes
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-eventos.html">
+                Meus Eventos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-espacos.html">
+                Meus Espaços
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-projetos.html">
+                Meus Projetos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-oportunidades.html">
+                Minhas Oportunidades
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-inscricoes.html">
+                Minhas Inscrições
+              </a>
+            </li>
+
+            <li class="li-sair">
+              <a class="dropdown-item" href="#">
+                Sair
+              </a>
+            </li>
+          </ul>
+        </li>
+      </div>
+
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburger"></span>
+      </button>
+
+      <ul id="menu" role="menu">
+        <li class="eventos">
+          <a href="pag-eventos.html" class="item-nav">
+            <span>Eventos</span>
+            <i class="fa-regular fa-calendar"></i>
+          </a>
+        </li>
+
+        <li class="espacos">
+          <a href="pag-espacos.html" class="item-nav">
+            <span>Espaços</span>
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </li>
+
+        <li class="agentes">
+          <a href="pag-agentes.html" class="item-nav">
+            <span>Agentes</span>
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+
+        <li class="projetos">
+          <a href="pag-projetos.html" class="item-nav">
+            <span>Projetos</span>
+            <i class="fa-solid fa-list-ul"></i>
+          </a>
+        </li>
+
+        <li class="oportunidades">
+          <a href="pag-oportunidades.html" class="item-nav">
+            <span>Oportunidades</span>
+            <i class="fa-regular fa-lightbulb"></i>
+          </a>
+        </li>
+
+        <li class="entrar user-off">
+          <a href="#" class="item-nav login">
+            <span>Entrar</span>
+            <i class="fa-solid fa-lock"></i>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown user-on desk">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="painel.html">
+                Painel de Controle
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="meuperfil.html">
+                Meu Perfil
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-agentes.html">
+                Meus Agentes
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-eventos.html">
+                Meus Eventos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-espacos.html">
+                Meus Espaços
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-projetos.html">
+                Meus Projetos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-oportunidades.html">
+                Minhas Oportunidades
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-inscricoes.html">
+                Minhas Inscrições
+              </a>
+            </li>
+
+            <li class="li-sair">
+              <a class="dropdown-item" href="#">
+                Sair
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="img/logo-org-ceara.png" alt="Governo do Ceará" height="25px">
+          </a>
+        </li>
+
+        <li class="icons-tol">
+          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-title="Sobre o Mapa Cultural do Ceará">
+            <i class="fa-solid fa-circle-info"></i>
+          </a>
+        </li>
+
+        <li class="icons-tol">
+          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-title="Como usar o Mapa Cultural">
+            <i class="fa-solid fa-circle-question"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="home-add">
+    <div class="input-add">
+      <span class="title-add-inp">
+        TIPO DE CADASTRO
+      </span>
+
+      <select id="selectOption" class="form-select form-select-sm" onchange="showDivs()">
+        <option value="0" selected>Evento</option>
+        <option value="1">Espaço</option>
+        <option value="2">Agente</option>
+        <option value="3">Projeto</option>
+      </select>
+    </div>
+
+    <div class="input-add">
+      <span class="title-add-inp">
+        Categorias de Cadastro
+      </span>
+
+      <select class="form-select form-select-sm" aria-label="Default select example">
+        <option selected>Biblioteca</option>
+        <option value="1">Praça</option>
+        <option value="2">Centro Cultural</option>
+      </select>
+    </div>
+
+    <div class="input-add">
+      <span class="title-add-inp">
+        ÁREA DE ATUAÇÃO
+      </span>
+
+      <select class="form-select form-select-sm" aria-label="Default select example">
+        <option selected>Arte Digital</option>
+        <option value="1">Arte de Rua</option>
+        <option value="2">Audiovisual</option>
+      </select>
+    </div>
+
+    <div class="input-add">
+      <span class="title-add-inp">Nome Principal</span>
+
+      <input type="text" class="form-control" placeholder="Nome pessoal, social, artístico ou profissional">
+    </div>
+
+    <div class="input-add img">
+      <span class="title-add-inp">Imagem de Fundo</span>
+
+      <input type="file" accept="image/*" onchange="previewImage(event, 'preview1')">
+
+      <img id="preview1" class="preview hidden" src="" alt="Preview 1">
+    </div>
+
+    <div class="input-add img">
+      <span class="title-add-inp">Imagem Principal</span>
+
+      <input type="file" accept="image/*" onchange="previewImage(event, 'preview2')">
+
+      <img id="preview2" class="preview hidden" src="" alt="Preview 2">
+    </div>
+
+    <div class="input-add">
+      <span class="title-add-inp">Site</span>
+
+      <input type="text" class="form-control" placeholder="Insira a url do seu site">
+    </div>
+
+    <div class="input-add">
+      <span class="title-add-inp">Redes sociais</span>
+
+      <div class="redes-add">
+        <div class="input-group input-group-sm">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa-brands fa-instagram"></i>
+          </span>
+
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group input-group-sm">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa-brands fa-facebook-f"></i>
+          </span>
+
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+      <div class="redes-add">
+        <div class="input-group input-group-sm">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa-brands fa-youtube"></i>
+          </span>
+
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group input-group-sm">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa-brands fa-twitter"></i>
+          </span>
+
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Insira a descrição curta aqui" id="floatingTextarea2"
+        style="height: 150px"></textarea>
+      <label for="floatingTextarea2">DESCRIÇÃO LONGA</label>
+    </div>
+
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Insira a descrição curta aqui" id="floatingTextarea2"
+        style="height: 100px"></textarea>
+      <label for="floatingTextarea2">DESCRIÇÃO CURTA</label>
+    </div>
+
+    <div id="div0" class="div-container">
+      <div class="input-add">
+        <span class="title-add-inp">Inscrições:</span>
+
+        <input type="text" class="form-control" placeholder="Inscrições">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Classificação Etária:</span>
+
+        <input type="text" class="form-control" placeholder="Classificação Etária">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Mais Informações:</span>
+
+        <input type="text" class="form-control" placeholder="Mais Informações">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">
+          Tradução para LIBRAS
+        </span>
+
+        <select class="form-select form-select-sm">
+          <option value="0" selected>Não Informado</option>
+          <option value="1">Sim</option>
+          <option value="2">Não</option>
+        </select>
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">
+          Áudio Descrição
+        </span>
+
+        <select class="form-select form-select-sm">
+          <option value="0" selected>Não Informado</option>
+          <option value="1">Sim</option>
+          <option value="2">Não</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="div1" class="div-container" style="display: none;">
+      <div class="input-add">
+        <span class="title-add-inp">
+          Acessibilidade
+        </span>
+
+        <select class="form-select form-select-sm">
+          <option selected>Acessibilidade</option>
+          <option value="0">Não Informado</option>
+          <option value="1">Sim</option>
+          <option value="2">Não</option>
+        </select>
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Capacidade</span>
+
+        <input type="text" class="form-control" placeholder="Especifique a capacidade do espaço">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Horário de funcionamento:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o horário de abertura e fechamento">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">E-mail</span>
+
+        <input type="email" class="form-control" placeholder="Insira um email que será exibido publicamente">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Telefone Público</span>
+
+        <input type="text" class="form-control" placeholder="Insira um telefone que será exibido publicamente">
+      </div>
+
+      <br>
+
+      <div class="input-add">
+        <span class="title-add-inp">CEP:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o CEP">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Logradouro:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Logradouro">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Número:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Número">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Complemento:</span>
+
+        <input type="text" class="form-control" placeholder="Insira um Complemento">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Bairro:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Bairro">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Município:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Município">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Estado:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Estado">
+      </div>
+    </div>
+
+    <div id="div2" class="div-container" style="display: none;">
+      <div class="input-add">
+        <span class="title-add-inp">Nome completo</span>
+
+        <input type="text" class="form-control" placeholder="Informe seu nome completo ou razão social">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">CPF / CNPJ</span>
+
+        <input type="text" class="form-control" placeholder="Informe seu CPF ou CNPJ com pontos, hífens e barras">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Data de Nascimento</span>
+
+        <input type="text" class="form-control" placeholder="Insira a data de nascimento ou fundação do agente">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">
+          Gênero
+        </span>
+
+        <select class="form-select form-select-sm">
+          <option selected>Selecione o gênero se for pessoa física</option>
+          <option value="0">Não Informar</option>
+          <option value="1">Mulher Cis</option>
+          <option value="2">Homem Cis</option>
+          <option value="3">Mulher Trans / Travesti</option>
+          <option value="4">Homem Trans</option>
+          <option value="5">Não Binárie / Outra Variabilidade</option>
+          <option value="6">Não Declarada</option>
+        </select>
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">
+          Orientação Sexual
+        </span>
+
+        <select class="form-select form-select-sm">
+          <option selected>Selecione uma orientação sexual se for pessoa física</option>
+          <option value="0">Não Informar</option>
+          <option value="1">Heterossexual</option>
+          <option value="2">Lésbica</option>
+          <option value="3">Gay</option>
+          <option value="4">Bissexual</option>
+          <option value="5">Assexual</option>
+          <option value="6">Outras</option>
+        </select>
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">
+          Agente Itinerante
+        </span>
+
+        <select class="form-select form-select-sm">
+          <option selected>Responda sim, caso seja agente Itinerante ou não se possuir residência fixa</option>
+          <option value="0">Não Informar</option>
+          <option value="1">Sim</option>
+          <option value="2">Não</option>
+        </select>
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">
+          Raça / Cor
+        </span>
+
+        <select class="form-select form-select-sm">
+          <option selected>Selecione a raça/cor se for pessoa física</option>
+          <option value="0">Não Informar</option>
+          <option value="1">Branca</option>
+          <option value="2">Preta</option>
+          <option value="3">Amarela</option>
+          <option value="4">Parda</option>
+          <option value="5">Indígena</option>
+        </select>
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">E-mail</span>
+
+        <input type="email" class="form-control" placeholder="Insira um email que será exibido publicamente">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Telefone Público</span>
+
+        <input type="text" class="form-control" placeholder="Insira um telefone que será exibido publicamente">
+      </div>
+
+      <br>
+
+      <div class="input-add">
+        <span class="title-add-inp">CEP:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o CEP">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Logradouro:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Logradouro">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Número:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Número">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Complemento:</span>
+
+        <input type="text" class="form-control" placeholder="Insira um Complemento">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Bairro:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Bairro">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Município:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Município">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Estado:</span>
+
+        <input type="text" class="form-control" placeholder="Insira o Estado">
+      </div>
+    </div>
+
+    <div id="div3" class="div-container" style="display: none;">
+      <div class="input-add">
+        <span class="title-add-inp">Data inicial:</span>
+
+        <input type="text" class="form-control" placeholder="Insira a data inicial do projeto">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Data final:</span>
+
+        <input type="text" class="form-control" placeholder="Insira a data final do projeto">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Valor (R$):</span>
+
+        <input type="text" class="form-control" placeholder="Informe o valor do projeto em (R$)">
+      </div>
+
+      <div class="input-add">
+        <span class="title-add-inp">Contra Partida:</span>
+
+        <input type="text" class="form-control" placeholder="O projeto possui ContraPartida ? descreva aqui.">
+      </div>
+    </div>
+
+    <div class="input-add">
+      <span class="title-add-inp">
+        Publicado por:
+      </span>
+
+      <select class="form-select form-select-sm">
+        <option selected>Selecione um Agente</option>
+        <option value="0">Agente 1</option>
+        <option value="1">Agente 2</option>
+        <option value="2">Agente 3</option>
+      </select>
+    </div>
+
+    <div class="footer-create">
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-secondary">
+          Salvar rascunho
+        </button>
+
+        <button type="button" class="btn btn-success">
+          Publicar
+        </button>
+
+        <button type="button" class="btn btn-danger">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    function previewImage(event, previewId) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var preview = document.getElementById(previewId);
+        preview.src = reader.result;
+        preview.classList.remove("hidden");
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    function showDivs() {
+      var selectElement = document.getElementById("selectOption");
+      var selectedOption = selectElement.value;
+
+      var divContainers = document.getElementsByClassName("div-container");
+      for (var i = 0; i < divContainers.length; i++) {
+        divContainers[i].style.display = "none";
+      }
+
+      var divToShow = document.getElementById("div" + selectedOption);
+      if (divToShow) {
+        divToShow.style.display = "flex";
+      }
+    }
+  </script>
+</body>
+
+</html>

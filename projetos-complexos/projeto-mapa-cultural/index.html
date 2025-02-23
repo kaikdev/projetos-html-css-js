@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mapa Cultural do Ceará</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .user-off {
+      display: none !important;
+    }
+    .user-on {
+      display: flex !important;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <a id="logo" href="index.html">
+      <img src="img/logo-mapacultural-ce.png" alt="Mapa Cultural" height="35px">
+    </a>
+
+    <nav id="nav">
+      <div class="user-on">
+        <li class="nav-item dropdown user-on mobile">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+  
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="painel.html">
+                Painel de Controle
+              </a>
+            </li>
+  
+            <li>
+              <a class="dropdown-item" href="meuperfil.html">
+                Meu Perfil
+              </a>
+            </li>
+  
+            <li>
+              <a class="dropdown-item" href="my-agentes.html">
+                Meus Agentes
+              </a>
+            </li>
+  
+            <li>
+              <a class="dropdown-item" href="my-eventos.html">
+                Meus Eventos
+              </a>
+            </li>
+  
+            <li>
+              <a class="dropdown-item" href="my-espacos.html">
+                Meus Espaços
+              </a>
+            </li>
+  
+            <li>
+              <a class="dropdown-item" href="my-projetos.html">
+                Meus Projetos
+              </a>
+            </li>
+  
+            <li>
+              <a class="dropdown-item" href="my-oportunidades.html">
+                Minhas Oportunidades
+              </a>
+            </li>
+  
+            <li>
+              <a class="dropdown-item" href="my-inscricoes.html">
+                Minhas Inscrições
+              </a>
+            </li>
+  
+            <li class="li-sair">
+              <a class="dropdown-item" href="#">
+                Sair
+              </a>
+            </li>
+          </ul>
+        </li>
+      </div>
+
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+        aria-expanded="false">
+        <span id="hamburger"></span>
+      </button>
+
+      <ul id="menu" role="menu">
+        <li class="eventos">
+          <a href="pag-eventos.html" class="item-nav">
+            <span>Eventos</span>
+            <i class="fa-regular fa-calendar"></i>
+          </a>
+        </li>
+        
+        <li class="espacos">
+          <a href="pag-espacos.html" class="item-nav">
+            <span>Espaços</span>
+            <i class="fa-solid fa-location-dot"></i>
+          </a>
+        </li>
+        
+        <li class="agentes">
+          <a href="pag-agentes.html" class="item-nav">
+            <span>Agentes</span>
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+        
+        <li class="projetos">
+          <a href="pag-projetos.html" class="item-nav">
+            <span>Projetos</span>
+            <i class="fa-solid fa-list-ul"></i>
+          </a>
+        </li>
+
+        <li class="oportunidades">
+          <a href="pag-oportunidades.html" class="item-nav">
+            <span>Oportunidades</span>
+            <i class="fa-regular fa-lightbulb"></i>
+          </a>
+        </li>
+
+        <li class="entrar user-off">
+          <a href="#" class="item-nav login">
+            <span>Entrar</span>
+            <i class="fa-solid fa-lock"></i>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown user-on desk">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="painel.html">
+                Painel de Controle
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="meuperfil.html">
+                Meu Perfil
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-agentes.html">
+                Meus Agentes
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-eventos.html">
+                Meus Eventos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-espacos.html">
+                Meus Espaços
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-projetos.html">
+                Meus Projetos
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-oportunidades.html">
+                Minhas Oportunidades
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="my-inscricoes.html">
+                Minhas Inscrições
+              </a>
+            </li>
+
+            <li class="li-sair">
+              <a class="dropdown-item" href="#">
+                Sair
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="#">
+            <img src="img/logo-org-ceara.png" alt="Governo do Ceará" height="25px">
+          </a>
+        </li>
+
+        <li class="icons-tol">
+          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Sobre o Mapa Cultural do Ceará">
+            <i class="fa-solid fa-circle-info"></i>
+          </a>
+        </li>
+
+        <li class="icons-tol">
+          <a href="#" class="" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Como usar o Mapa Cultural">
+            <i class="fa-solid fa-circle-question"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <nav class="home-nav">
+      <!--
+      <li id="nav-back">
+        <a href="#" onclick="goToPreviousSection()">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </li>
+      -->
+
+      <li id="nav-intro">
+        <a href="#home-intro">
+          <i class="fa-solid fa-house"></i>
+          <span>Introdução</span>
+        </a>
+      </li>
+
+      <li id="nav-eventos">
+        <a href="#home-eventos">
+          <i class="fa-regular fa-calendar"></i>
+          <span>Eventos</span>
+        </a>
+      </li>
+
+      <li id="nav-agentes">
+        <a href="#home-agentes">
+          <i class="fa-solid fa-user"></i>
+          <span>Agentes</span>
+        </a>
+      </li>
+
+      <li id="nav-espacos">
+        <a href="#home-espacos">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Espaços</span>
+        </a>
+      </li>
+
+      <li id="nav-projetos">
+        <a href="#home-projetos">
+          <i class="fa-solid fa-list-ul"></i>
+          <span>Projetos</span>
+        </a>
+      </li>
+
+      <li id="nav-oportunidades">
+        <a href="#home-oportunidades">
+          <i class="fa-regular fa-lightbulb"></i>
+          <span>Oportunidades</span>
+        </a>
+      </li>
+
+      <li id="nav-desenvolvedores">
+        <a href="#home-desenvolvedores">
+          <i class="fa-solid fa-code"></i>
+          <span>Desenvolvedores</span>
+        </a>
+      </li>
+
+      <!--
+      <li id="nav-next">
+        <a href="#" onclick="goToNextSection()">
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </li>
+      -->
+    </nav>
+
+    <section id="home-intro">
+      <div class="logo-mapa-main">
+        <img src="img/logo-mapacultural-white.png" alt="Mapa Cultural do Ceará" width="250px">
+      </div>
+
+      <div class="cont-home">
+        <h1>Bem vind@!</h1>
+        <p>
+          Plataforma livre, colaborativa e interativa de mapeamento do cenário cultural cearense e instrumento de governança digital no aprimoramento da gestão pública, dos mecanismos de participação e da democratização do acesso às políticas culturais promovidas pela Secretaria da Cultura do Estado do Ceará.
+
+          <br>
+          <br>
+
+          O Mapa Cultural é uma ferramenta de comunicação visibilizando os eventos do circuito de festivais de artes e do calendário cultural, os projetos desenvolvidos e os espaços promovidos pelos agentes e instituições culturais do Ceará. É também a plataforma de acesso e execução dos editais realizados pela Secretaria.
+
+          <br>
+          <br>
+
+          Além de conferir a agenda de eventos, você também pode colaborar na gestão da cultura do estado: basta criar seu perfil de agente cultural. A partir do cadastro, fica mais fácil participar dos editais e programas da Secretaria e também divulgar seus eventos, espaços ou projetos.
+        </p>
+
+        <form action="#">
+          <input type="text" placeholder="Digite uma palavra-chave">
+
+          <button type="button">
+            Buscar
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+
+        <a href="#" class="btn-colabore">
+          Colabore com os Mapas Culturais
+        </a>
+      </div>
+
+      <a href="#home-eventos" class="home-next" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Continue e Saiba Mais">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+
+      <div class="logo-gov-home">
+        <img src="img/logo-org-white.png" alt="Governo do Ceará" width="250px">
+      </div>
+    </section>
+
+    <section id="home-eventos">
+      <div class="title-section-home">
+        <div class="left">
+          <h1>
+            <i class="fa-regular fa-calendar"></i>
+            Eventos
+          </h1>
+
+          <div class="home-estatisticas">
+            <li>
+              <span>97</span>
+              <span>eventos agendados</span>
+            </li>
+
+            <li>
+              <span>0</span>
+              <span>eventos da SECULT</span>
+            </li>
+          </div>
+
+          <p class="desc-estatisticas">
+            Você pode pesquisar eventos culturais nos campos de busca combinada. Como usuário cadastrado, você pode incluir seus eventos na plataforma e divulgá-los gratuitamente. 
+            <br>
+            Encontre eventos por:
+          </p>
+
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-eventos-tab" data-bs-toggle="pill" data-bs-target="#pills-eventos" type="button" role="tab" aria-controls="pills-eventos" aria-selected="true">Linguagem</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-eventos" role="tabpanel" aria-labelledby="pills-eventos-tab" tabindex="0">
+              <a class="tag" href="#">Arte
+                  e Cultura Digital
+              </a>
+              
+              <a class="tag" href="#">Artes
+                  Circenses
+              </a>
+              
+              <a class="tag" href="#">Artes
+                  Integradas
+              </a>
+              
+              <a class="tag" href="#">Artes
+                  Visuais
+              </a>
+              
+              <a class="tag" href="#">Artistas
+                  Negros e Periféricos
+              </a>
+              
+              <a class="tag" href="#">Audiovisual
+              </a>
+              
+              <a class="tag" href="#">Ação
+                  Educativa
+              </a>
+              
+              <a class="tag" href="#">Biblioteca
+              </a>
+              
+              <a class="tag" href="#">Cinema
+              </a>
+              
+              <a class="tag" href="#">Contadores
+                  de Histórias e Mediadores de Leitura
+              </a>
+              
+              <a class="tag" href="#">Cultura
+                  Afro-brasileira
+              </a>
+              
+              <a class="tag" href="#">Cultura
+                  Digital
+              </a>
+              
+              <a class="tag" href="#">Cultura
+                  Indígena
+              </a>
+              
+              <a class="tag" href="#">Cultura
+                  Tradicional
+              </a>
+              
+              <a class="tag" href="#">Curso
+                  ou Oficina
+              </a>
+              
+              <a class="tag" href="#">Dança
+              </a>
+              
+              <a class="tag" href="#">Design
+              </a>
+              
+              <a class="tag" href="#">Esporte
+              </a>
+              
+              <a class="tag" href="#">Exposição
+              </a>
+              
+              <a class="tag" href="#">Formação
+              </a>
+              
+              <a class="tag" href="#">Fotografia
+              </a>
+              
+              <a class="tag" href="#">Gastronomia
+                  e Cultura Alimentar
+              </a>
+              
+              <a class="tag" href="#">Gestão
+                  Cultural
+              </a>
+              
+              <a class="tag" href="#">Hip
+                  Hop
+              </a>
+              
+              <a class="tag" href="#">Humor
+              </a>
+              
+              <a class="tag" href="#">Jogos
+              </a>
+              
+              <a class="tag" href="#">Livro
+                  e Literatura
+              </a>
+              
+              <a class="tag" href="#">Meio
+                  Ambiente
+              </a>
+              
+              <a class="tag" href="#">Moda
+              </a>
+              
+              <a class="tag" href="#">Museus
+              </a>
+              
+              <a class="tag" href="#">Música
+              </a>
+              
+              <a class="tag" href="#">Música
+                  Erudita
+              </a>
+              
+              <a class="tag" href="#">Música
+                  Popular
+              </a>
+              
+              <a class="tag" href="#">Outros
+              </a>
+              
+              <a class="tag" href="#">Palestra,
+                  Debate ou Encontro
+              </a>
+              
+              <a class="tag" href="#">Patrimônio
+              </a>
+              
+              <a class="tag" href="#">Performance
+              </a>
+              
+              <a class="tag" href="#">Povos
+                  Ciganos
+              </a>
+              
+              <a class="tag" href="#">Produção
+                  Cultural
+              </a>
+              
+              <a class="tag" href="#">Rede
+                  Cultura Viva
+              </a>
+              
+              <a class="tag" href="#">Rádio
+              </a>
+              
+              <a class="tag" href="#">Teatro
+              </a>
+              
+              <a class="tag" href="#">Teatro
+                  de Bonecos
+              </a>
+              
+              <a class="tag" href="#">Turismo
+                  comunitário
+              </a>
+              
+              <a class="tag" href="#">Técnicos
+                  em espetáculos artísticos e culturais
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="links-box">
+            <a href="#">
+              <i class="fa-solid fa-circle-plus"></i>
+              Adicionar evento
+            </a>
+    
+            <a href="#">
+              Ver tudo
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="home-agentes">
+      <div class="title-section-home">
+        <div class="left">
+          <h1>
+            <i class="fa-solid fa-user"></i>
+            Agentes
+          </h1>
+
+          <div class="home-estatisticas">
+            <li>
+              <span>109332</span>
+              <span>agentes cadastrados</span>
+            </li>
+
+            <li>
+              <span>44</span>
+              <span>agentes da SECULT</span>
+            </li>
+          </div>
+
+          <p class="desc-estatisticas">
+            Você pode colaborar na gestão da cultura com suas próprias informações, preenchendo seu perfil de agente cultural. Neste espaço, estão registrados artistas, gestores e produtores; uma rede de atores envolvidos na cena cultural da região. Você pode cadastrar um ou mais agentes (grupos, coletivos, bandas instituições, empresas, etc.), além de associar ao seu perfil eventos e espaços culturais com divulgação gratuita. 
+            <br>
+            Encontre agentes por:
+          </p>
+
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-area-tab" data-bs-toggle="pill" data-bs-target="#pills-area" type="button" role="tab" aria-controls="pills-area" aria-selected="true">Área de atuação</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-tipo-tab" data-bs-toggle="pill" data-bs-target="#pills-tipo" type="button" role="tab" aria-controls="pills-tipo" aria-selected="false">Tipo</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-area" role="tabpanel" aria-labelledby="pills-area-tab" tabindex="0">
+              <a class="tag" href="#">Antropologia</a>
+              <a class="tag" href="#">Arqueologia</a>
+              <a class="tag" href="#">Arquitetura-Urbanismo</a>
+              <a class="tag" href="#">Arquivo</a>
+              <a class="tag" href="#">Arte
+                  Digital</a>
+              <a class="tag" href="#">Arte
+                  de Rua</a>
+              <a class="tag" href="#">Artes
+                  Visuais</a>
+              <a class="tag" href="#">Artes
+                  integradas</a>
+              <a class="tag" href="#">Artesanato</a>
+              <a class="tag" href="#">Audiovisual</a>
+              <a class="tag" href="#">Cinema</a>
+              <a class="tag" href="#">Circo</a>
+              <a class="tag" href="#">Comunicação</a>
+              <a class="tag" href="#">Cultura
+                  Afro-brasileira</a>
+              <a class="tag" href="#">Cultura
+                  Cigana</a>
+              <a class="tag" href="#">Cultura
+                  Digital</a>
+              <a class="tag" href="#">Cultura
+                  Estrangeira (imigrantes)</a>
+              <a class="tag" href="#">Cultura
+                  Indígena</a>
+              <a class="tag" href="#">Cultura
+                  LGBT</a>
+              <a class="tag" href="#">Cultura
+                  Negra</a>
+              <a class="tag" href="#">Cultura
+                  Popular</a>
+              <a class="tag" href="#">Dança</a>
+              <a class="tag" href="#">Design</a>
+              <a class="tag" href="#">Direito
+                  Autoral</a>
+              <a class="tag" href="#">Economia
+                  Criativa</a>
+              <a class="tag" href="#">Educação</a>
+              <a class="tag" href="#">Esporte</a>
+              <a class="tag" href="#">Filosofia</a>
+              <a class="tag" href="#">Fotografia</a>
+              <a class="tag" href="#">Gastronomia</a>
+              <a class="tag" href="#">Gestão
+                  Cultural</a>
+              <a class="tag" href="#">História</a>
+              <a class="tag" href="#">Humor</a>
+              <a class="tag" href="#">Jogos
+                  Eletrônicos</a>
+              <a class="tag" href="#">Jornalismo</a>
+              <a class="tag" href="#">Leitura</a>
+              <a class="tag" href="#">Literatura</a>
+              <a class="tag" href="#">Livro</a>
+              <a class="tag" href="#">Meio
+                  Ambiente</a>
+              <a class="tag" href="#">Moda</a>
+              <a class="tag" href="#">Museu</a>
+              <a class="tag" href="#">Mídias
+                  Sociais</a>
+              <a class="tag" href="#">Música</a>
+              <a class="tag" href="#">Novas
+                  Mídias</a>
+              <a class="tag" href="#">Outros</a>
+              <a class="tag" href="#">Patrimônio
+                  Imaterial</a>
+              <a class="tag" href="#">Patrimônio
+                  Material</a>
+              <a class="tag" href="#">Performance</a>
+              <a class="tag" href="#">Pesquisa</a>
+              <a class="tag" href="#">Ponto
+                  de Cultura - CE</a>
+              <a class="tag" href="#">Povos
+                  Tradicionais de Matriz Africana</a>
+              <a class="tag" href="#">Produção</a>
+              <a class="tag" href="#">Produção
+                  Cultural</a>
+              <a class="tag" href="#">Quilombola</a>
+              <a class="tag" href="#">Rádio</a>
+              <a class="tag" href="#">Saúde</a>
+              <a class="tag" href="#">Sociologia</a>
+              <a class="tag" href="#">Teatro</a>
+              <a class="tag" href="#">Televisão</a>
+              <a class="tag" href="#">Turismo</a>
+              <a class="tag" href="#">Técnico
+                  Cenografia</a>
+              <a class="tag" href="#">Técnico
+                  Figurino</a>
+              <a class="tag" href="#">Técnico
+                  Iluminação</a>
+              <a class="tag" href="#">Técnico
+                  de Sonorização</a>
+            </div>
+
+            <div class="tab-pane fade" id="pills-tipo" role="tabpanel" aria-labelledby="pills-tipo-tab" tabindex="0">
+              <a href="#" class="tag">Individual</a>
+
+              <a href="#" class="tag">Coletivo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="box-destaque">
+            <a href="#">
+              <img src="img/destaque-agente.jpg" alt="Destaque Agente" width="100%">
+
+              <div class="conteudo-destaque">
+                <h3 class="c-destaque">DESTAQUE</h3>
+                
+                <h2 class="n-destaque">Maria Aureniza Silva</h2>
+                
+                <p class="d-destaque">Graduada em Gestão Financeira e especializada em Administração Estratégica.</p>
+              </div>
+            </a>
+          </div>
+          
+          <div class="links-box">
+            <a href="#">
+              <i class="fa-solid fa-circle-plus"></i>
+              Adicionar agente
+            </a>
+    
+            <a href="#">
+              Ver tudo
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="home-espacos">
+      <div class="title-section-home">
+        <div class="left">
+          <h1>
+            <i class="fa-solid fa-location-dot"></i>
+            Espaços
+          </h1>
+          
+          <div class="home-estatisticas">
+            <li>
+              <span>5322</span>
+              <span>espaços cadastrados</span>
+            </li>
+
+            <li>
+              <span>63</span>
+              <span>espaços da SECULT</span>
+            </li>
+          </div>
+
+          <p class="desc-estatisticas">
+            Procure por espaços culturais incluídos na plataforma, acessando os campos de busca combinada que ajudam na precisão de sua pesquisa. Cadastre também os espaços onde desenvolve suas atividades artísticas e culturais.
+            <br>
+            Encontre espaços por:
+          </p>
+
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-area2-tab" data-bs-toggle="pill" data-bs-target="#pills-area2" type="button" role="tab" aria-controls="pills-area2" aria-selected="true">Área de atuação</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-tipo2-tab" data-bs-toggle="pill" data-bs-target="#pills-tipo2" type="button" role="tab" aria-controls="pills-tipo2" aria-selected="false">Tipo</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-area2" role="tabpanel" aria-labelledby="pills-area2-tab" tabindex="0">
+              <a class="tag" href="#">Antropologia</a>
+              <a class="tag" href="#">Arqueologia</a>
+              <a class="tag" href="#">Arquitetura-Urbanismo</a>
+              <a class="tag" href="#">Arquivo</a>
+              <a class="tag" href="#">Arte
+                  Digital</a>
+              <a class="tag" href="#">Arte
+                  de Rua</a>
+              <a class="tag" href="#">Artes
+                  Visuais</a>
+              <a class="tag" href="#">Artes
+                  integradas</a>
+              <a class="tag" href="#">Artesanato</a>
+              <a class="tag" href="#">Audiovisual</a>
+              <a class="tag" href="#">Cinema</a>
+              <a class="tag" href="#">Circo</a>
+              <a class="tag" href="#">Comunicação</a>
+              <a class="tag" href="#">Cultura
+                  Afro-brasileira</a>
+              <a class="tag" href="#">Cultura
+                  Cigana</a>
+              <a class="tag" href="#">Cultura
+                  Digital</a>
+              <a class="tag" href="#">Cultura
+                  Estrangeira (imigrantes)</a>
+              <a class="tag" href="#">Cultura
+                  Indígena</a>
+              <a class="tag" href="#">Cultura
+                  LGBT</a>
+              <a class="tag" href="#">Cultura
+                  Negra</a>
+              <a class="tag" href="#">Cultura
+                  Popular</a>
+              <a class="tag" href="#">Dança</a>
+              <a class="tag" href="#">Design</a>
+              <a class="tag" href="#">Direito
+                  Autoral</a>
+              <a class="tag" href="#">Economia
+                  Criativa</a>
+              <a class="tag" href="#">Educação</a>
+              <a class="tag" href="#">Esporte</a>
+              <a class="tag" href="#">Filosofia</a>
+              <a class="tag" href="#">Fotografia</a>
+              <a class="tag" href="#">Gastronomia</a>
+              <a class="tag" href="#">Gestão
+                  Cultural</a>
+              <a class="tag" href="#">História</a>
+              <a class="tag" href="#">Humor</a>
+              <a class="tag" href="#">Jogos
+                  Eletrônicos</a>
+              <a class="tag" href="#">Jornalismo</a>
+              <a class="tag" href="#">Leitura</a>
+              <a class="tag" href="#">Literatura</a>
+              <a class="tag" href="#">Livro</a>
+              <a class="tag" href="#">Meio
+                  Ambiente</a>
+              <a class="tag" href="#">Moda</a>
+              <a class="tag" href="#">Museu</a>
+              <a class="tag" href="#">Mídias
+                  Sociais</a>
+              <a class="tag" href="#">Música</a>
+              <a class="tag" href="#">Novas
+                  Mídias</a>
+              <a class="tag" href="#">Outros</a>
+              <a class="tag" href="#">Patrimônio
+                  Imaterial</a>
+              <a class="tag" href="#">Patrimônio
+                  Material</a>
+              <a class="tag" href="#">Performance</a>
+              <a class="tag" href="#">Pesquisa</a>
+              <a class="tag" href="#">Ponto
+                  de Cultura - CE</a>
+              <a class="tag" href="#">Povos
+                  Tradicionais de Matriz Africana</a>
+              <a class="tag" href="#">Produção</a>
+              <a class="tag" href="#">Produção
+                  Cultural</a>
+              <a class="tag" href="#">Quilombola</a>
+              <a class="tag" href="#">Rádio</a>
+              <a class="tag" href="#">Saúde</a>
+              <a class="tag" href="#">Sociologia</a>
+              <a class="tag" href="#">Teatro</a>
+              <a class="tag" href="#">Televisão</a>
+              <a class="tag" href="#">Turismo</a>
+              <a class="tag" href="#">Técnico
+                  Cenografia</a>
+              <a class="tag" href="#">Técnico
+                  Figurino</a>
+              <a class="tag" href="#">Técnico
+                  Iluminação</a>
+              <a class="tag" href="#">Técnico
+                  de Sonorização</a>
+            </div>
+
+            <div class="tab-pane fade" id="pills-tipo2" role="tabpanel" aria-labelledby="pills-tipo2-tab" tabindex="0">
+              <a class="tag" href="#">Cine
+                itinerante</a>
+              <a class="tag" href="#">Cineclube</a>
+              <a class="tag" href="#">Drive-in</a>
+              <a class="tag" href="#">Espaço
+                  Público Para Projeção de Filmes</a>
+              <a class="tag" href="#">Sala
+                  de cinema</a>
+              <a class="tag" href="#">Biblioteca
+                  Pública</a>
+              <a class="tag" href="#">Biblioteca
+                  Privada</a>
+              <a class="tag" href="#">Biblioteca
+                  Comunitária (incluí­dos os pontos de leitura)</a>
+              <a class="tag" href="#">Biblioteca
+                  Escolar</a>
+              <a class="tag" href="#">Biblioteca
+                  Nacional</a>
+              <a class="tag" href="#">Biblioteca
+                  Universitária</a>
+              <a class="tag" href="#">Biblioteca
+                  Especializada</a>
+              <a class="tag" href="#">Teatro
+                  Público</a>
+              <a class="tag" href="#">Teatro
+                  Privado</a>
+              <a class="tag" href="#">Circo
+                  Itinerante</a>
+              <a class="tag" href="#">Circo
+                  Fixo</a>
+              <a class="tag" href="#">Terreno
+                  para Circo</a>
+              <a class="tag" href="#">Circo
+                  Tradicional</a>
+              <a class="tag" href="#">Circo
+                  Moderno</a>
+              <a class="tag" href="#">Centro
+                  Cultural Público</a>
+              <a class="tag" href="#">Centro
+                  Cultural Privado</a>
+              <a class="tag" href="#">Arquivo
+                  Público</a>
+              <a class="tag" href="#">Arquivo
+                  Privado</a>
+              <a class="tag" href="#">Museu
+                  Público</a>
+              <a class="tag" href="#">Museu
+                  Privado</a>
+              <a class="tag" href="#">Galeria
+                  de arte</a>
+              <a class="tag" href="#">Livraria</a>
+              <a class="tag" href="#">Sebo</a>
+              <a class="tag" href="#">Videolocadora</a>
+              <a class="tag" href="#">Lan-house</a>
+              <a class="tag" href="#">Antiquário</a>
+              <a class="tag" href="#">Ateliê</a>
+              <a class="tag" href="#">Centro
+                  de artesanato</a>
+              <a class="tag" href="#">Casa
+                  de espetáculo</a>
+              <a class="tag" href="#">Danceteria</a>
+              <a class="tag" href="#">Estúdio</a>
+              <a class="tag" href="#">Concha
+                  acústica</a>
+              <a class="tag" href="#">Banca
+                  de jornal</a>
+              <a class="tag" href="#">Espaço
+                  para Eventos</a>
+              <a class="tag" href="#">Creative
+                  Bureau</a>
+              <a class="tag" href="#">Ponto
+                  de Leitura Afro</a>
+              <a class="tag" href="#">Centro
+                  Comunitário</a>
+              <a class="tag" href="#">Casa
+                  do Patrimônio</a>
+              <a class="tag" href="#">Ponto
+                  de Cultura</a>
+              <a class="tag" href="#">Usina
+                  Cultural</a>
+              <a class="tag" href="#">Praça
+                  dos esportes e da cultura</a>
+              <a class="tag" href="#">Espaço
+                  Mais Cultura</a>
+              <a class="tag" href="#">Sala
+                  de dança</a>
+              <a class="tag" href="#">Gafieira</a>
+              <a class="tag" href="#">Espaço
+                  para apresentação de dança</a>
+              <a class="tag" href="#">Centro
+                  cultural itinerante</a>
+              <a class="tag" href="#">Trio
+                  elétrico</a>
+              <a class="tag" href="#">Clube
+                  social</a>
+              <a class="tag" href="#">Centro
+                  de tradições</a>
+              <a class="tag" href="#">Sala
+                  Multiuso</a>
+              <a class="tag" href="#">Rádio
+                  Comunitária</a>
+              <a class="tag" href="#">Audioteca</a>
+              <a class="tag" href="#">Centro
+                  de Artes e Esportes Unificados - CEUs</a>
+              <a class="tag" href="#">Coreto</a>
+              <a class="tag" href="#">Ginásio
+                  Poliesportivo</a>
+              <a class="tag" href="#">Sala
+                  de Leitura</a>
+              <a class="tag" href="#">Outros
+                  Equipamentos Culturais</a>
+              <a class="tag" href="#">Centro
+                  de Documentação Público</a>
+              <a class="tag" href="#">Centro
+                  de Documentação Privado</a>
+              <a class="tag" href="#">Templo</a>
+              <a class="tag" href="#">Terreiro</a>
+              <a class="tag" href="#">Mesquitas</a>
+              <a class="tag" href="#">Sinagoga</a>
+              <a class="tag" href="#">Igreja</a>
+              <a class="tag" href="#">Centro
+                  Espírita</a>
+              <a class="tag" href="#">Instituição
+                  Pública de Ensino Regular Federal</a>
+              <a class="tag" href="#">Instituição
+                  Pública de Ensino Regular Estadual</a>
+              <a class="tag" href="#">Instituição
+                  Pública de Ensino Regular Municipal</a>
+              <a class="tag" href="#">Instituição
+                  Pública de Ensino Regular Distrital</a>
+              <a class="tag" href="#">Instituição
+                  Privada Particular</a>
+              <a class="tag" href="#">Instituição
+                  Privada Comunitária</a>
+              <a class="tag" href="#">Instituição
+                  Privada Confessional</a>
+              <a class="tag" href="#">Instituição
+                  Privada Filantrópica</a>
+              <a class="tag" href="#">Instituição
+                  Pública Federal exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Instituição
+                  Pública Estadual exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Instituição
+                  Pública Municipal exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Instituição
+                  Pública Distrital exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Instituição
+                  Privada Particular exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Instituição
+                  Privada Comunitária exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Instituição
+                  Privada Confessional exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Instituição
+                  Privada Filantrópica exclusivamente voltada para formação artistica e cultural</a>
+              <a class="tag" href="#">Escola
+                  livre de Artes Cênicas</a>
+              <a class="tag" href="#">Escola
+                  livre de Artes Visuais</a>
+              <a class="tag" href="#">Escola
+                  livre de Audiovisual</a>
+              <a class="tag" href="#">Escola
+                  livre de Hip Hop</a>
+              <a class="tag" href="#">Escola
+                  livre de Cultura Digital</a>
+              <a class="tag" href="#">Escola
+                  livre de Música</a>
+              <a class="tag" href="#">Escola
+                  livre de Cultura Popular</a>
+              <a class="tag" href="#">Escola
+                  livre de Gestão Cultural</a>
+              <a class="tag" href="#">Escola
+                  livre de Pontinhos de cultura</a>
+              <a class="tag" href="#">Escola
+                  livre de Patrimônio</a>
+              <a class="tag" href="#">Escola
+                  livre de Design</a>
+              <a class="tag" href="#">Bens
+                  culturais de natureza material</a>
+              <a class="tag" href="#">Bem
+                  Imóvel</a>
+              <a class="tag" href="#">Bem
+                  Arqueológico</a>
+              <a class="tag" href="#">Bem
+                  Paisagístico</a>
+              <a class="tag" href="#">Bem
+                  Móvel ou Integrado</a>
+              <a class="tag" href="#">Sitio
+                  Histórico</a>
+              <a class="tag" href="#">Documentação</a>
+              <a class="tag" href="#">Coleções</a>
+              <a class="tag" href="#">Bens
+                  culturais de natureza imaterial</a>
+              <a class="tag" href="#">Outros</a>
+              <a class="tag" href="#">Palco
+                  de Rua</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="box-destaque">
+            <a href="#">
+              <img src="img/destaque-agente.jpg" alt="Destaque Agente" width="100%">
+
+              <div class="conteudo-destaque">
+                <h3 class="c-destaque">DESTAQUE</h3>
+                
+                <h2 class="n-destaque">Maria Aureniza Silva</h2>
+                
+                <p class="d-destaque">Graduada em Gestão Financeira e especializada em Administração Estratégica.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="links-box">
+            <a href="#">
+              <i class="fa-solid fa-circle-plus"></i>
+              Adicionar espaço
+            </a>
+    
+            <a href="#">
+              Ver tudo
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="home-projetos">
+      <div class="title-section-home">
+        <div class="left">
+          <h1>
+            <i class="fa-solid fa-list-ul"></i>
+            Projetos
+          </h1>
+
+          <div class="home-estatisticas">
+            <li>
+              <span>2866</span>
+              <span>projetos cadastrados</span>
+            </li>
+
+            <li>
+              <span>26</span>
+              <span>projetos da SECULT</span>
+            </li>
+          </div>
+
+          <p class="desc-estatisticas">
+            Reúne projetos culturais ou agrupa eventos de todos os tipos. Neste espaço, você encontra leis de fomento, mostras, convocatórias e editais criados, além de diversas iniciativas cadastradas pelos usuários da plataforma. Cadastre-se e divulgue seus projetos.
+            <br>
+            Encontre projetos por:
+          </p>
+
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-tipo3-tab" data-bs-toggle="pill" data-bs-target="#pills-tipo3" type="button" role="tab" aria-controls="pills-tipo3" aria-selected="false">Tipo</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-tipo3" role="tabpanel" aria-labelledby="pills-tipo3-tab" tabindex="0">
+              <a class="tag" href="#">Festival</a>
+              <a class="tag" href="#">Encontro</a>
+              <a class="tag" href="#">Sarau</a>
+              <a class="tag" href="#">Reunião</a>
+              <a class="tag" href="#">Mostra</a>
+              <a class="tag" href="#">Convenção</a>
+              <a class="tag" href="#">Ciclo</a>
+              <a class="tag" href="#">Programa</a>
+              <a class="tag" href="#">Edital</a>
+              <a class="tag" href="#">Concurso</a>
+              <a class="tag" href="#">Exposição</a>
+              <a class="tag" href="#">Jornada</a>
+              <a class="tag" href="#">Exibição</a>
+              <a class="tag" href="#">Feira</a>
+              <a class="tag" href="#">Intercâmbio
+                  Cultural</a>
+              <a class="tag" href="#">Festa
+                  Popular</a>
+              <a class="tag" href="#">Festa
+                  Religiosa</a>
+              <a class="tag" href="#">Seminário</a>
+              <a class="tag" href="#">Congresso</a>
+              <a class="tag" href="#">Palestra</a>
+              <a class="tag" href="#">Simpósio</a>
+              <a class="tag" href="#">Fórum</a>
+              <a class="tag" href="#">Curso</a>
+              <a class="tag" href="#">Oficina</a>
+              <a class="tag" href="#">Jornada</a>
+              <a class="tag" href="#">Conferência
+                  Pública Setorial</a>
+              <a class="tag" href="#">Conferência
+                  Pública Nacional</a>
+              <a class="tag" href="#">Conferência
+                  Pública Estadual</a>
+              <a class="tag" href="#">Conferência
+                  Pública Municipal</a>
+              <a class="tag" href="#">Parada
+                  e Desfile Militar</a>
+              <a class="tag" href="#">Parada
+                  e Desfile Cívico</a>
+              <a class="tag" href="#">Parada
+                  e Desfile Festivo</a>
+              <a class="tag" href="#">Parada
+                  e Desfile Político</a>
+              <a class="tag" href="#">Parada
+                  e Desfile de Ações Afirmativas</a>
+              <a class="tag" href="#">Inscrições</a>
+              <a class="tag" href="#">Pesquisa</a>
+              <a class="tag" href="#">Consulta</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="box-destaque">
+            <a href="#">
+              <img src="img/destaque-agente.jpg" alt="Destaque Agente" width="100%">
+
+              <div class="conteudo-destaque">
+                <h3 class="c-destaque">DESTAQUE</h3>
+                
+                <h2 class="n-destaque">Maria Aureniza Silva</h2>
+                
+                <p class="d-destaque">Graduada em Gestão Financeira e especializada em Administração Estratégica.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="links-box">
+            <a href="#">
+              <i class="fa-solid fa-circle-plus"></i>
+              Adicionar projeto
+            </a>
+    
+            <a href="#">
+              Ver tudo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="home-oportunidades">
+      <div class="title-section-home">
+        <div class="left">
+          <h1>
+            <i class="fa-regular fa-lightbulb"></i>
+            Oportunidades
+          </h1>
+          
+          <div class="home-estatisticas">
+            <li>
+              <span>949</span>
+              <span>oportunidades cadastradas</span>
+            </li>
+
+            <li>
+              <span>0</span>
+              <span>oportunidades da SECULT</span>
+            </li>
+          </div>
+
+          <p class="desc-estatisticas">
+            Faça a sua inscrição ou acesse o resultado de diversas convocatórias como editais, oficinas, prêmios e concursos. Você também pode criar o seu próprio formulário e divulgar uma oportunidade para outros agentes culturais.
+            <br>
+            Encontre oportunidades por:
+          </p>
+
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-tipo4-tab" data-bs-toggle="pill" data-bs-target="#pills-tipo4" type="button" role="tab" aria-controls="pills-tipo4" aria-selected="false">Tipo</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-tipo4" role="tabpanel" aria-labelledby="pills-tipo4-tab" tabindex="0">
+              <a class="tag" href="#">Festival</a>
+              <a class="tag" href="#">Encontro</a>
+              <a class="tag" href="#">Sarau</a>
+              <a class="tag" href="#">Reunião</a>
+              <a class="tag" href="#">Mostra</a>
+              <a class="tag" href="#">Convenção</a>
+              <a class="tag" href="#">Ciclo</a>
+              <a class="tag" href="#">Programa</a>
+              <a class="tag" href="#">Edital</a>
+              <a class="tag" href="#">Concurso</a>
+              <a class="tag" href="#">Exposição</a>
+              <a class="tag" href="#">Jornada</a>
+              <a class="tag" href="#">Exibição</a>
+              <a class="tag" href="#">Feira</a>
+              <a class="tag" href="#">Intercâmbio
+                  Cultural</a>
+              <a class="tag" href="#">Festa
+                  Popular</a>
+              <a class="tag" href="#">Festa
+                  Religiosa</a>
+              <a class="tag" href="#">Seminário</a>
+              <a class="tag" href="#">Congresso</a>
+              <a class="tag" href="#">Palestra</a>
+              <a class="tag" href="#">Simpósio</a>
+              <a class="tag" href="#">Fórum</a>
+              <a class="tag" href="#">Curso</a>
+              <a class="tag" href="#">Oficina</a>
+              <a class="tag" href="#">Jornada</a>
+              <a class="tag" href="#">Conferência
+                  Pública Setorial</a>
+              <a class="tag" href="#">Conferência
+                  Pública Nacional</a>
+              <a class="tag" href="#">Conferência
+                  Pública Estadual</a>
+              <a class="tag" href="#">Conferência
+                  Pública Municipal</a>
+              <a class="tag" href="#">Abaixo-assinado</a>
+              <a class="tag" href="#">Campanhas</a>
+              <a class="tag" href="#">Pesquisa</a>
+              <a class="tag" href="#">Oportunidade
+                  de trabalho</a>
+              <a class="tag" href="#">Outros
+                  eventos</a>
+              <a class="tag" href="#">Outros
+                  tipos de inscrição</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="links-box">
+            <a href="#">
+              Ver tudo
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="home-desenvolvedores">
+      <div class="title-section-home">
+        <h1>
+          <i class="fa-solid fa-code"></i>
+          Desenvolvedores
+        </h1>
+      </div>
+
+      <p>
+        Existem algumas maneiras de desenvolvedores interagirem com o Mapas Culturais. A primeira é através da nossa <a href="https://github.com/secultce/mapasculturais/blob/master/documentation/docs/mc_config_api.md" target="_blank">API</a>. Com ela você pode acessar os dados públicos no nosso banco de dados e utilizá-los para desenvolver aplicações externas. Além disso, o Mapas Culturais é construído a partir do sofware livre <a href="http://institutotim.org.br/project/mapas-culturais/" target="_blank">Mapas Culturais</a>, criado em parceria com o <a href="http://institutotim.org.br" target="_blank">Instituto TIM</a>, e você pode contribuir para o seu desenvolvimento através do <a href="https://github.com/secultce/mapasculturais/" target="_blank">GitHub</a>.
+      </p>
+    </section>
+  </main>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

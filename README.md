@@ -2,7 +2,7 @@
 
 Este repositório apresenta uma coleção de trabalhos que desenvolvi profissionalmente como freelancer. Iniciei minha atuação na área de desenvolvimento web em setembro de 2020, quando obtive minha primeira oportunidade. Naquela época, ainda estava cursando o curso técnico em Desenvolvimento de Sistemas na Etec da Zona Leste, que concluí em 2021.
 
-Todos os templates aqui são divulgáveis, pois contêm apenas conteúdo de front-end, sem dados que possam comprometer a privacidade de clientes ou projetos reais.
+Todos os projetos aqui foram autorizados como divulgáveis, pois contêm apenas conteúdo de front-end, sem dados que possam comprometer a privacidade de clientes ou projetos reais.
 
 Os projetos estão organizados em duas categorias, com base na minha experiência ao desenvolvê-los:
 
@@ -25,6 +25,8 @@ Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já d
 - **Projeto Voe Concursos**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-voe-concursos/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-voe-concursos/)
 
 - **Projeto Option**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-option/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-option/)
+
+- **Projeto Mapa Cultural**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-mapa-cultural/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-mapa-cultural/)
 
 
 ### Projetos Simples
