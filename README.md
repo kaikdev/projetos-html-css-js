@@ -44,3 +44,5 @@ Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já d
 - **Site de Links**: [https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-de-links/](https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-de-links/)
 
 - **Site Checkout**: [https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-checkout/](https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-checkout/)
+
+- **Site Fitclub**: [https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-fitclub/](https://kaikdev.github.io/projetos-html-css-js/projetos-simples/site-fitclub/)

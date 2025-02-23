@@ -1,0 +1,1070 @@
+@font-face {
+    font-family: Bison-Bold;
+    src: url('../fonts/Bison-Bold(PersonalUse).ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NexaLight;
+    src: url('../fonts/NexaLight.otf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NexaBook;
+    src: url('../fonts/NexaBook.otf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NexaBlack;
+    src: url('../fonts/NexaBlack.otf') format('truetype');
+    font-weight: normal;
+}
+
+body,
+ul,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#logo img {
+    position: relative;
+    top: -11px;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(49, 34, 22, 0.800) 0%, rgba(137,126,121,1) 100%);
+    position: relative;
+    z-index: 99;
+}
+  
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+  
+#menu a {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'NexaLight';
+    font-weight: 600;
+}
+  
+#btn-mobile {
+    display: none;
+}
+
+#menu div {
+    display: flex;
+    gap: 10px;
+}
+
+.user-off {
+    gap: 10px;
+}
+
+.user-off a {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'NexaLight';
+    font-weight: 600;
+    padding: 6px 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 7px;
+}
+
+.user-off a span {
+    position: relative;
+    top: 2px;
+}
+
+.user-off a.btn-cadastro {
+    border-color: #ffba4c;
+    color: #000;
+    background-image: linear-gradient(to right, #f8b102, #e89105);
+    font-family: 'NexaBook' !important;
+}
+
+.user-off a:hover {
+    transition: .3s;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fafafa;
+}
+
+.user-off a.btn-cadastro:hover {
+    transition: .3s;
+    background-image: linear-gradient(to right, #f8b102, #ffba4c);
+    color: #000;
+}
+
+.user-on a {
+    padding: 7px 10px 5px 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.user-on a:hover {
+    transition: .3s;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fafafa;
+}
+
+.user-on a span {
+    position: relative;
+    top: 2px;
+}
+
+.user-on a i, .user-on a img {
+    position: relative;
+    top: -1px;
+}
+
+.user-on a img {
+    filter: invert(1);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.carousel-indicators {
+    justify-content: left;
+    margin-left: 26%;
+}
+
+section.nutricionais, section.aulas, section.premios {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.nutricionais div, section.aulas div, section.premios div {
+    width: 50%;
+}
+
+section.nutricionais .left, section.aulas .left, section.premios .left {
+    padding: 0 5% 0 0;
+}
+
+
+p.title-section {
+    font-family: 'NexaLight';
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #312216e6;
+    margin-bottom: 0.5rem;
+}
+
+p.text-section {
+    font-family: 'NexaLight';
+    font-size: 18px;
+    color: #312216e6;
+    text-align: justify;
+}
+
+a.btn-conhecermais {
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #2e2828;
+    color: #2e2828;
+    padding: 5px 1rem;
+    border-radius: 10px;
+    font-family: 'Bison-Bold';
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    max-width: 260px;
+}
+
+a.btn-conhecermais:hover {
+    transition: .3s;
+    background-color: #f1f1f1;
+}
+
+section.indicacoes-prod, section.clube {
+    position: relative;
+}
+
+section.indicacoes-prod p {
+    position: absolute;
+    top: 51%;
+    left: 76%;
+    width: 27%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+section.clube .area-clube {
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.clube .area-clube p {
+    text-align: center;
+}
+
+section.area-clube p.title-section {
+    text-align: center;
+}
+
+section.clube a.btn-conhecermais {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(46, 40, 40, 0.5);
+}
+
+section.clube a.btn-conhecermais:hover {
+    transition: .3s;
+    background-color: #fff;
+    border: 1px solid rgba(46, 40, 40, 1);
+}
+
+#modalLogin .modal-content {
+    border: none;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+}
+
+#modalLogin button.btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 14px;
+}
+
+#modalLogin label {
+    display: block;
+    padding-left: 10px;
+    font-family: 'NexaBlack';
+}
+
+#modalLogin input {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 10px;
+    background-color: rgba(49, 34, 22, 0.5);
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#modalLogin input::placeholder {
+    color: #fff;
+}
+
+#modalLogin input:focus-visible {
+    outline: none;
+    border: 2px solid rgba(49, 34, 22, 1);
+}
+
+.recovery-login {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top: -0.5rem;
+    font-size: 16px;
+}
+
+.recovery-login a {
+    text-decoration: underline;
+    color: #2e2828;
+    font-family: 'NexaLight';
+}
+
+.footer-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.footer-login a, .footer-login button {
+    font-family: 'Bison-Bold';
+    font-size: 1.5rem;
+    color: #2e2828;
+    letter-spacing: 2px;
+    height: 50px;
+    width: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.footer-login a {
+    border: 1px solid #2e2828;
+}
+
+.footer-login a:hover {
+    transition: .3s;
+    background-color: #fff;
+}
+
+.footer-login button {
+    border: 1px solid transparent;
+    background-image: linear-gradient(to right, #f8b102, #e89105);
+}
+
+.footer-login button:hover {
+    transition: .3s;
+    background-image: linear-gradient(to right, #f8b102, #ffba4c);
+}
+
+section.cadastro {
+    height: calc(100vh - 70px);
+    min-height: 700px;
+    overflow-y: auto;
+    background-image: url("../img/bg_inferior.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.cadastro form {
+    background-color: rgba(49, 34, 22, 0.4);
+    padding: 2rem;
+    width: 60%;
+    border-radius: 20px;
+}
+
+section.cadastro label {
+    display: block;
+    font-family: 'NexaBlack';
+    color: #fff;
+}
+
+section.cadastro form div {
+    margin-bottom: 1rem;
+}
+
+section.cadastro input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+section.cadastro input::placeholder {
+    color: #fff;
+}
+
+section.cadastro input:focus-visible {
+    outline: none;
+    border: 2px solid rgba(49, 34, 22, 1);
+}
+
+section.cadastro .select-nascimento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+section.cadastro .select-nascimento select {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+section.cadastro .select-nascimento select option {
+    color: #000;
+}
+
+section.cadastro button {
+    font-family: 'Bison-Bold';
+    font-size: 1.5rem;
+    color: #2e2828;
+    background-image: linear-gradient(to right, #f8b102, #e89105);
+    border: none;
+    padding: 20px;
+    letter-spacing: 2px;
+    height: 50px;
+    display: flex;
+    margin: 2rem auto auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+section.cadastro input, section.cadastro select {
+    height: 48px;
+}
+
+.box-video {
+    background-image: url("../img/foto_superior.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -180px;
+    z-index: 2;
+}
+
+section.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+.area-video p {
+    color: #fff;
+    text-align: center;
+}
+
+section.video video {
+    width: auto;
+    height: 500px;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.336);
+}
+
+section.grupo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 3rem;
+}
+
+section.grupo img {
+    border-radius: 30px;
+    box-shadow: -5px 10px 50px rgba(0, 0, 0, 0.336);
+}
+
+section.grupo .left p {
+    font-family: 'Bison-Bold';
+    font-size: 1.5rem;
+    color: #504035;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+section.grupo .left a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-family: 'Bison-Bold';
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #000;
+    background-image: linear-gradient(to right, #f8b102, #e89105);
+    padding: 6px 10px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+#modalDashboard .modal-content {
+    border: none;
+    padding: 2rem;
+    flex-direction: row;
+    background-color: #A69993;
+}
+
+#modalDashboard .btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 16px;
+}
+
+.menu-dash {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 2px solid #2e2828;
+}
+
+.menu-dash button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'Bison-Bold';
+    font-size: 1.2rem;
+    padding: 5px 50px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    letter-spacing: 2px;
+}
+
+.menu-dash button.ativo {
+    transition: .3s;
+    color: #2e2828;
+    border: 2px solid #2e2828;
+}
+
+.conteudo-dash {
+    width: 100%;
+}
+
+.box-input-dash {
+    display: block !important;
+    margin-bottom: 1rem;
+}
+
+.box-input-dash .select-nascimento {
+    display: block !important;
+}
+
+.box-input-dash label {
+    display: block;
+    font-family: 'NexaBlack';
+    color: #fff;
+    font-size: 16px;
+}
+
+.box-input-dash input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.box-input-dash input::placeholder {
+    color: #fff;
+}
+
+.box-input-dash input:focus-visible {
+    outline: none;
+    border: 2px solid rgba(49, 34, 22, 1);
+}
+
+.box-input-dash input, .box-input-dash select {
+    height: 48px;
+}
+
+.box-input-dash .select-nascimento select {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.box-input-dash .select-nascimento select option {
+    color: #000;
+}
+
+.box-input-dash .tel, .box-input-dash .select-nascimento {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+input#ddd {
+    width: 20%;
+}
+
+.btn-dash {
+    font-family: 'Bison-Bold';
+    font-size: 1.2rem;
+    color: #2e2828;
+    background-image: linear-gradient(to right, #f8b102, #e89105);
+    border: none;
+    padding: 20px;
+    letter-spacing: 2px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.box-input-dash video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+div#conteudo-relatorio input {
+    margin-bottom: 0.5rem;
+}
+
+div#conteudo-relatorio {
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+div#conteudo-relatorio .box-input-dash, div#conteudo-relatorio .box-input-dash input:last-child  {
+    margin-bottom: 0px;
+}
+
+footer {
+    background: #efefed;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 16px;
+}
+
+footer .left ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+footer .left ul a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+footer .left p {
+    color: #949493;
+}
+
+footer .right ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .right ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+} 
+
+main.shop {
+    background-image: url("../img/bg-shop.png");
+    background-position: center 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 3rem;
+}
+
+section.area-shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+p.title-section.shop {
+    text-align: center;
+    color: #fff;
+}
+
+section.area-shop .left-s,
+section.area-shop .right-s {
+    width: 50%;
+}
+
+p.title-shop {
+    font-family: 'Bison-Bold';
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #383838;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-width: 250px;
+    text-align: center;
+}
+
+section.area-shop video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+section.area-shop section.grupo {
+    padding: 2rem 0;
+}
+
+/* RESPONSIVIDADE -- RESPONSIVIDADE -- RESPONSIVIDADE */
+@media (min-width: 1500px) {
+    section.cadastro form {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1380px) {
+    section.indicacoes-prod p {
+        width: 35%;
+        left: 71%;
+    }
+    section.clube .area-clube {
+        top: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    section.nutricionais, section.aulas, section.premios {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    section.nutricionais div, section.aulas div, section.premios div {
+        width: 100%;
+    }
+    section.nutricionais .left, section.aulas .left, section.premios .left {
+        padding: 0px;
+    }
+    section.indicacoes-prod p {
+        position: relative;
+        width: 100%;
+        left: 0;
+        transform: translate(0px, 0px);
+        color: #000;
+        padding: 1rem 2rem;
+    }
+    section.clube .area-clube {
+        position: relative;
+        width: 100%;
+        top: 0;
+        padding: 1rem 2rem;
+    }
+    .carousel-indicators {
+        margin-bottom: 0px;
+        margin-left: 25%;
+    }
+    section.clube a.btn-conhecermais {
+        background-color: #fff;
+        border: 1px solid #2e2828;
+    }
+    section.video {
+        width: 90%;
+        padding: 1rem 2rem;
+    }
+    section.video video {
+        width: 100%;
+        height: auto;
+    }
+    section.grupo {
+        flex-direction: column-reverse;
+    }
+    section.grupo .left {
+        text-align: center;
+    }
+    section.grupo .right {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1000px) {
+    div#modalDashboard .modal-xl {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 800px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        right: 0px;
+        background-image: linear-gradient(to right, #5b4f45, #897e79);
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: auto;
+        visibility: visible;
+        overflow-y: auto;
+        padding: 0 0 1rem;
+        border-radius: 0px 0px 15px 15px;
+    }
+    #header {
+        height: 60px;
+    }
+    #menu a {
+        padding: 10px 0;
+        margin: 0 1rem;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: #fff;
+    }
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    .user-on {
+        flex-direction: column;
+    }
+    #header {
+        padding: 1rem;
+    }
+    #btn-mobile {
+        padding-right: 0px;
+    }
+    section.cadastro form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    #modalDashboard .btn-close {
+        top: 10px;
+        right: 10px;
+    }
+    #modalDashboard .modal-content {
+        flex-direction: column;
+    }
+    .menu-dash {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: none;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #2e2828;
+    }
+    .menu-dash button {
+        font-size: 1rem;
+    }
+    .box-input-dash .tel, .box-input-dash .select-nascimento {
+        flex-direction: column;
+    }
+    input#ddd {
+        width: 100%;
+    }
+    #modalDashboard .modal-content {
+        padding: 2rem 1rem;
+        min-height: 100vh;
+    }
+    div#modalDashboard {
+        background-color: #A69993;
+    }
+    .btn-dash {
+        width: 100%;
+    }
+    div#conteudo-relatorio {
+        max-height: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #logo img {
+        width: 120px;
+    }
+    .carousel-indicators {
+        bottom: -5px;
+    }
+    .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+    }
+    section.nutricionais, section.aulas, section.clube .area-clube, section.indicacoes-prod p {
+        padding: 1rem;
+    }
+    section.premios {
+        padding: 1rem 1rem 2rem;
+    }
+    section.indicacoes-prod, section.clube {
+        padding-top: 1rem;
+    }
+    section.clube p.title-section {
+        text-align: left;
+    }
+    section.clube p.text-section {
+        text-align: justify;
+    }
+    a.btn-conhecermais {
+        margin-top: 1rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        max-width: 170px;
+    }
+    p.title-section {
+        font-size: 1rem;
+    }
+    p.text-section {
+        font-size: 15px;
+    }
+    .user-off a {
+        font-size: 12px;
+    }
+    section.video {
+        padding: 10px 0 0;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer-login {
+        flex-direction: column-reverse;
+    }
+    .footer-login a, .footer-login button {
+        font-size: 1rem;
+        width: 100%;
+    }
+    #modalLogin .modal-content {
+        padding: 2rem 1rem;
+    }
+    section.cadastro {
+        min-height: 820px;
+    }
+    section.cadastro .select-nascimento {
+        flex-direction: column;
+    }
+    section.cadastro form {
+        padding: 2rem 1rem;
+    }
+    section.cadastro button {
+        margin: 1.5rem auto auto;
+    }
+    section.grupo {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .user-off {
+        gap: 5px;
+    }
+    .user-off a {
+        padding: 4px 5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .area-video p.text-section {
+        font-size: 14px;
+    }
+    section.box-video {
+        min-height: 520px;
+    }
+}
+
+@media (max-width: 370px) {
+    #logo img {
+        width: 100px;
+        top: -9px;
+    }
+    #header {
+        padding: 1rem 10px;
+    }
+    #menu a {
+        margin: 0 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .user-off a {
+        font-size: 9px;
+    }
+    .area-video p.text-section {
+        font-size: 12px;
+    }
+    section.grupo {
+        padding: 0 2rem 2rem;
+    }
+}
