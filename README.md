@@ -28,6 +28,8 @@ Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já d
 
 - **Projeto Mapa Cultural**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-mapa-cultural/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-mapa-cultural/)
 
+- **Projeto Betmart**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-betmart/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-betmart/)
+
 
 ### Projetos Simples
 
