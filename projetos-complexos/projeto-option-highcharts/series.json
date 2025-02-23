@@ -1,0 +1,22 @@
+{
+    "series": [
+        {
+            "type": "candlestick",
+            "color": "#ff0000",
+            "upColor": "#0faf4b",
+            "lineColor": "#ff0000",
+            "upLineColor": "#0faf4b",
+            "lastPrice": {
+                "enabled": true,
+                "label": {
+                    "enabled": true,
+                    "backgroundColor": "#FF7F7F"
+                }
+            },
+            "data": [
+                [1317888060000, 372.4, 373, 372.01, 372.16],
+                [1317895740000, 377.16, 377.79, 377.01, 377.4512]
+            ]
+        }
+    ]
+}

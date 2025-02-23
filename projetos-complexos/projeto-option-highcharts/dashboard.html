@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Option</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header-main">
+        <div class="header-left">
+            <a href="#" class="logo-header">
+                <img src="img/logo.png" alt="logo">
+            </a>
+
+            <button class="btn-fav-header" type="button">
+                <i class="fa-solid fa-star"></i>
+            </button>
+
+            <button class="btn-menu-mobile" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="header-right">
+            <div class="dropdown-center exchange">
+                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="title-drop">
+                        Forex MT4 Real
+                    </span>
+
+                    <i class="fa-solid fa-money-bill-1-wave"></i>
+                    R$ 500.000,00
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item active" href="#">
+                            <span>
+                                <i class="fa-solid fa-money-bill-1-wave"></i>
+                                Demo
+                            </span>
+                            <span class="value">
+                                R$ 5.000,00
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <span>
+                                <i class="fa-solid fa-money-bill-1-wave"></i>
+                                Forex MT5 Real
+                            </span>
+                            <span class="value">
+                                R$ 5.000,00
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <span>
+                                <i class="fa-solid fa-money-bill-1-wave"></i>
+                                Forex MT5 Demo
+                            </span>
+                            <span class="value">
+                                R$ 5.000,00
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <span>
+                                <i class="fa-solid fa-money-bill-1-wave"></i>
+                                Forex MT4 Real
+                            </span>
+                            <span class="value">
+                                R$ 5.000,00
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <span>
+                                <i class="fa-solid fa-money-bill-1-wave"></i>
+                                Forex MT4 Demo
+                            </span>
+                            <span class="value">
+                                R$ 5.000,00
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dropdown depositar">
+                <button class="dropdown-toggle btn-depositar-header" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 4H16V3C16 2.20435 15.6839 1.44129 15.1213 0.87868C14.5587 0.316071 13.7956 0 13 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.316071 1.44129 0 2.20435 0 3V15C0 15.7956 0.316071 16.5587 0.87868 17.1213C1.44129 17.6839 2.20435 18 3 18H17C17.7956 18 18.5587 17.6839 19.1213 17.1213C19.6839 16.5587 20 15.7956 20 15V7C20 6.20435 19.6839 5.44129 19.1213 4.87868C18.5587 4.31607 17.7956 4 17 4ZM3 2H13C13.2652 2 13.5196 2.10536 13.7071 2.29289C13.8946 2.48043 14 2.73478 14 3V4H3C2.73478 4 2.48043 3.89464 2.29289 3.70711C2.10536 3.51957 2 3.26522 2 3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2ZM18 12H17C16.7348 12 16.4804 11.8946 16.2929 11.7071C16.1054 11.5196 16 11.2652 16 11C16 10.7348 16.1054 10.4804 16.2929 10.2929C16.4804 10.1054 16.7348 10 17 10H18V12ZM18 8H17C16.2044 8 15.4413 8.31607 14.8787 8.87868C14.3161 9.44129 14 10.2044 14 11C14 11.7956 14.3161 12.5587 14.8787 13.1213C15.4413 13.6839 16.2044 14 17 14H18V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H3C2.73478 16 2.48043 15.8946 2.29289 15.7071C2.10536 15.5196 2 15.2652 2 15V5.83C2.32127 5.94302 2.65943 6.00051 3 6H17C17.2652 6 17.5196 6.10536 17.7071 6.29289C17.8946 6.48043 18 6.73478 18 7V8Z" fill="currentColor"></path>
+                    </svg>
+
+                    <span>Recarregar Conta</span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <p class="title">Recarga rápida da conta</p>
+
+                    <span class="subtitle">Fazer um depósito para começar a ganhar</span>
+
+                    <div class="select-payment">
+                        <span>Forma de Pagamento</span>
+
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="fastPayment">
+                            <option value="0" selected>Pix</option>
+                            <option value="1">Picpay</option>
+                            <option value="2">Binance Pay</option>
+                            <option value="3">Tether (USDT)</option>
+                        </select>
+                    </div>
+
+                    <div class="value-payment">
+                        <label for="valuePayment">Montante</label>
+                        
+                        <div>
+                            <span class="addon-value">R$</span>
+                            <input id="valuePayment" type="text" value="10">
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="checkCodePromo" onchange="toggleCodePromo()">
+
+                        <label class="form-check-label" for="checkCodePromo">
+                            Tenho um código promocional
+                        </label>
+                    </div>
+
+                    <div class="codePromo" id="codePromo">
+                        <label for="codePromotional">Código promocional</label>
+                        
+                        <input type="text" id="codePromotional">
+                    </div>
+
+                    <button type="button" class="btn-fast-deposito">
+                        Continuar e pagar
+                        <span class="btn-value">R$ 100</span>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="dropdown perfil">
+                <button class="btn-perfil-header" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" style="background-image: url('https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-avatar-ou-perfil-humano_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1713830400&semt=ais');">
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-end">
+                    <div class="left-perfil">
+                        <div class="top">
+                            <div class="image-perfil" style="background-image: url('https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-avatar-ou-perfil-humano_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1713830400&semt=ais');"></div>
+
+                            <div class="infos-perfil">
+                                <p class="flag-name">
+                                    <img src="img/flags/brazil.png" class="country-flag" alt="Bandeira do País" width="20px">
+
+                                    <span>Nome do Usuário Aqui</span>
+                                </p>
+
+                                <a href="#" class="level-user">
+                                    <span>Plano Básico 1</span>
+                                </a>
+
+                                <div class="id-user">
+                                    <p>
+                                        <i class="fa-solid fa-user"></i>
+
+                                        <span>
+                                            ID
+                                            <span class="blur-perfil">123456789</span>
+                                        </span>
+                                    </p>
+
+                                    <button type="button" id="btnBlurPerfil" class="btn-eye-perfil" title="Exibir/Ocultar dados">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                        <i class="fa-solid fa-eye" style="display: none;"></i>
+                                    </button>
+                                </div>
+
+                                <p class="info-default">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span class="blur-perfil">email123@usuario.com</span>
+                                </p>
+
+                                <p class="info-default">
+                                    <i class="fa-solid fa-wallet"></i>
+                                    <span>
+                                        R$
+                                        <span class="blur-perfil">250.000,00</span>
+                                    </span>
+                                </p>
+
+                                <p class="info-default">
+                                    <i class="fa-solid fa-earth-americas"></i>
+                                    <span class="blur-perfil">123.456.78.9</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="warning-user">
+                            <p class="acc-demo">
+                                Você está operando na conta demo.
+                            </p>
+
+                            <p class="acc-real" style="display: none;">
+                                Você está operando na conta real.
+                            </p>
+                        </div>
+
+                        <div class="area-estatiscas-perfil">
+                            <div class="top-stats">
+                                <span>Estatísticas de contas reais hoje:</span>
+
+                                <button type="button" class="btn-reload">
+                                    <i class="fa-solid fa-rotate"></i>
+                                </button>
+                            </div>
+
+                            <p class="estatisticas-default">
+                                <span>Negociações:</span>
+
+                                <span class="blur-perfil">27</span>
+                            </p>
+
+                            <p class="estatisticas-default">
+                                <span>Circulação comercial:</span>
+
+                                <span>
+                                    R$
+                                    <span class="blur-perfil">1.000,00</span>
+                                </span>
+                            </p>
+
+                            <p class="estatisticas-default">
+                                <span>Circulação líquida:</span>
+
+                                <span>
+                                    R$
+                                    <span class="blur-perfil">1.000,00</span>
+                                </span>
+                            </p>
+
+                            <p class="estatisticas-default">
+                                <span>Lucro comercial:</span>
+
+                                <span>
+                                    R$
+                                    <span class="blur-perfil">1.000,00</span>
+                                </span>
+                            </p>
+
+                            <a href="#" class="btnEstatisticasGlobal">
+                                Estatísticas Total da Conta Real
+                            </a>
+                        </div>
+
+                        <p class="status-info-perfil">
+                            <span>Estado do e-mail:</span>
+
+                            <span class="verification-ok">
+                                <i class="fa-regular fa-circle-check"></i>
+                                Verificado
+                            </span>
+                        </p>
+
+                        <p class="status-info-perfil">
+                            <span>Status da identidade:</span>
+
+                            <span class="verification-not">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                Não verificado
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="right-perfil">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-user"></i>
+                                    Perfil
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                                    Depositar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                                    Sacar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-bell"></i>
+                                    Notificações
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-headset"></i>
+                                    Suporte
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                    Configurações
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="btn-language-perfil" data-bs-toggle="collapse" href="#collapseLanguage" role="button" aria-expanded="false" aria-controls="collapseLanguage">
+                                    <img src="img/flags/brazil.png" alt="Language" width="15px">
+                                    <span>Português</span>
+
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                  
+                                <div class="collapse" id="collapseLanguage">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="option-language">
+                                                <img src="img/flags/usa.png" alt="Language" width="15px">
+                                                <span>English</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="option-language">
+                                                <img src="img/flags/spain.png" alt="Language" width="15px">
+                                                <span>Español</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="option-language">
+                                                <img src="img/flags/france.png" alt="Language" width="15px">
+                                                <span>Français</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="option-language">
+                                                <img src="img/flags/germany.png" alt="Language" width="15px">
+                                                <span>Deutsche</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="option-language">
+                                                <img src="img/flags/brazil.png" alt="Language" width="15px">
+                                                <span>Português</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="area-aside-main">
+        <aside class="aside-main">
+            <nav class="nav-aside">
+                <a href="#" class="item-nav-aside">
+                    <i class="fa-solid fa-chart-area"></i>
+                    <span>Trade</span>
+                </a>
+                
+                <a href="#" class="item-nav-aside">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>Suporte</span>
+                </a>
+    
+                <a href="#" class="item-nav-aside active">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Conta</span>
+                </a>
+    
+                <a href="#" class="item-nav-aside">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Torneios</span>
+                </a>
+    
+                <a href="#" class="item-nav-aside">
+                    <i class="fa-solid fa-coins"></i>
+                    <span>Mercado</span>
+                </a>
+    
+                <div class="dropdown dropend more">
+                    <a href="#" class="item-nav-aside" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <span>Mais</span>
+                    </a>
+    
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-chart-pie"></i>
+                                Análise
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-ranking-star"></i>
+                                TOP
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle-dot"></i>
+                                Sinais
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <div class="aside-footer">
+                <div class="buttons-settings">
+                    <button type="button">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+    
+                    <button type="button">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+    
+                    <button type="button">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+    
+                    <button type="button">
+                        <i class="fa-solid fa-right-long"></i>
+                    </button>
+                </div>
+    
+                <button class="btn-social" type="button">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.1667 8.37424C15.1667 7.19296 16.1244 6.23535 17.3056 6.23535H25.8612C27.0425 6.23535 28.0001 7.19296 28.0001 8.37424V16.9298C28.0001 18.1111 27.0425 19.0687 25.8612 19.0687H17.3056C16.1244 19.0687 15.1667 18.1111 15.1667 16.9298V8.37424Z" fill="white"></path><path d="M21.5833 17.9991C24.5365 17.9991 26.9305 15.6051 26.9305 12.6519C26.9305 9.69872 24.5365 7.30469 21.5833 7.30469C18.6301 7.30469 16.2361 9.69872 16.2361 12.6519C16.2361 15.6051 18.6301 17.9991 21.5833 17.9991Z" fill="#026FD3"></path><path d="M24.252 10.4402C24.2978 10.1326 24.0163 9.88973 23.753 10.0098L18.5091 12.4019C18.3203 12.488 18.3341 12.7852 18.5299 12.8499L19.6113 13.2077C19.8178 13.276 20.0412 13.2407 20.2215 13.1113L22.6596 11.3613C22.7331 11.3085 22.8133 11.4171 22.7505 11.4844L20.9954 13.3643C20.8252 13.5467 20.859 13.8557 21.0638 13.9891L23.0287 15.2693C23.2491 15.4129 23.5326 15.2687 23.5738 14.992L24.252 10.4402Z" fill="white"></path><path d="M11.0834 2.73535H2.91675C1.95025 2.73535 1.16675 3.51885 1.16675 4.48535V12.652C1.16675 13.6185 1.95025 14.402 2.91675 14.402H11.0834C12.0499 14.402 12.8334 13.6185 12.8334 12.652V4.48535C12.8334 3.51885 12.0499 2.73535 11.0834 2.73535Z" fill="#026FD3"></path><path d="M9.26953 10.255L9.5293 8.56885H7.91146V7.4751C7.91146 7.01481 8.13704 6.56364 8.86165 6.56364H9.59766V5.12809C9.59766 5.12809 8.93001 5.01416 8.29199 5.01416C6.95898 5.01416 6.08854 5.8208 6.08854 7.28369V8.56885H4.60742V10.255H6.08854V14.4022H7.91146V10.255H9.26953Z" fill="white"></path><path d="M7 15.0688C7 13.412 8.34315 12.0688 10 12.0688H18C19.6569 12.0688 21 13.412 21 15.0688V23.0688C21 24.7257 19.6569 26.0688 18 26.0688H10C8.34315 26.0688 7 24.7257 7 23.0688V15.0688Z" fill="#F14D5B"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.0688H16C17.6569 14.0688 19 15.412 19 17.0688V21.0688C19 22.7257 17.6569 24.0688 16 24.0688H12C10.3431 24.0688 9 22.7257 9 21.0688V17.0688C9 15.412 10.3431 14.0688 12 14.0688ZM12 15.0688C10.8954 15.0688 10 15.9643 10 17.0688V21.0688C10 22.1734 10.8954 23.0688 12 23.0688H16C17.1046 23.0688 18 22.1734 18 21.0688V17.0688C18 15.9643 17.1046 15.0688 16 15.0688H12ZM14 21.5688C12.6193 21.5688 11.5 20.4496 11.5 19.0688C11.5 17.6881 12.6193 16.5688 14 16.5688C15.3807 16.5688 16.5 17.6881 16.5 19.0688C16.5 20.4496 15.3807 21.5688 14 21.5688ZM14 20.5688C14.8284 20.5688 15.5 19.8973 15.5 19.0688C15.5 18.2404 14.8284 17.5688 14 17.5688C13.1716 17.5688 12.5 18.2404 12.5 19.0688C12.5 19.8973 13.1716 20.5688 14 20.5688ZM16.5 17.0688C16.2239 17.0688 16 16.845 16 16.5688C16 16.2927 16.2239 16.0688 16.5 16.0688C16.7761 16.0688 17 16.2927 17 16.5688C17 16.845 16.7761 17.0688 16.5 17.0688Z" fill="white">
+                        </path>
+                    </svg>
+    
+                    <span>Junte-se a nós</span>
+                </button>
+    
+                <button class="btn-ajuda" type="button">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Ajuda</span>
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <main class="main-content dashboard">
+        <div class="tabs-dashboard">
+            <button class="item off" type="button" onclick="openTabDash(this, 'Negociacao')">
+                Perfil de Negociação
+            </button>
+
+            <button class="item active" type="button" onclick="openTabDash(this, 'Perfil')">
+                Perfil
+            </button>
+
+            <button class="item off" type="button" onclick="openTabDash(this, 'Seguranca')">
+                Segurança
+            </button>
+
+            <button class="item off" type="button" onclick="openTabDash(this, 'Historico')">
+                Histórico de Operações
+            </button>
+        </div>
+
+        <div class="body-tabs-perfil">
+            <div id="Negociacao" class="container-tab tab-item-dash" style="display:none">
+                <h5>Perfil de Negociação</h5>
+            </div>
+
+            <div id="Perfil" class="container-tab tab-item-dash">
+                <div class="div-box-perfil dados-pessoais">
+                    <p class="title-perfil">
+                        Dados Pessoais
+                    </p>
+
+                    <div class="body-box-perfil">
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Nome
+                                <span class="tag-asterisco">*</span>
+                            </span>
+
+                            <div class="area-input">
+                                <input type="text" placeholder="Não preenchido">
+
+                                <button class="confirm-input" type="button">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Sobrenome
+                                <span class="tag-asterisco">*</span>
+                            </span>
+
+                            <div class="area-input">
+                                <input type="text" placeholder="Não preenchido">
+
+                                <button class="confirm-input" type="button">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Data de nascimento
+                                <span class="tag-asterisco">*</span>
+                            </span>
+
+                            <div class="area-input">
+                                <input type="text" placeholder="Não preenchido">
+
+                                <button class="confirm-input" type="button">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais email">
+                            <span class="label-perfil">
+                                E-mail
+                            </span>
+
+                            <div class="area-input">
+                                <input type="text" placeholder="Não preenchido" value="email123@user.com">
+
+                                <button class="confirm-input" type="button">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <span class="verification ok" style="display: none;">
+                                    <i class="fa-regular fa-circle-check"></i>
+                                    Verificado
+                                </span>
+
+                                <span class="verification not">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    Não verificado
+                                </span>
+
+                                <button class="btn-confirm-email" type="button">
+                                    Reenviar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Telefone
+                            </span>
+
+                            <div class="area-input">
+                                <input type="text" placeholder="Não preenchido">
+
+                                <button class="confirm-input" type="button">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais halal">
+                            <span class="label-perfil">
+                                Conta islâmica halal
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchContaIslamica">
+                            </div>
+                        </div>
+
+                        <p class="info-asterisco">
+                            <span class="tag-asterisco">*</span>
+                            Dados obrigatórios
+                        </p>
+                    </div>
+                </div>
+
+                <div class="div-box-perfil identidade">
+                    <p class="title-perfil">
+                        Status da Identidade
+
+                        <span class="verification ok" style="display: none;">
+                            <i class="fa-regular fa-circle-check"></i>
+                            Verificado
+                        </span>
+
+                        <span class="verification not">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            Não verificado
+                        </span>
+                    </p>
+
+                    <div class="body-box-perfil">
+                        <p class="message-documents">
+                            Antes de carregar os documentos, preencha esta informação no seu perfil: Nome, Sobrenome, Data de nascimento.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="div-box-perfil naveg-social">
+                    <p class="title-perfil">
+                        Navegação Social
+                    </p>
+
+                    <div class="body-box-perfil">
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Avatar
+                            </span>
+
+                            <div class="area-perfil">
+                                <div class="image-perfil" style="background-image: url('https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-avatar-ou-perfil-humano_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1713830400&semt=ais');"></div>
+
+                                <button class="btn-finish-user" type="button">
+                                    Apagar avatar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Ocultar meu perfil
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchOcultarPerfil">
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais halal">
+                            <span class="label-perfil">
+                                Apelido
+                            </span>
+
+                            <div class="area-input">
+                                <input type="text" placeholder="Não preenchido" value="ApelidoUser999X">
+
+                                <button class="confirm-input" type="button">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-box-perfil definicoes">
+                    <p class="title-perfil">
+                        Definições
+                    </p>
+
+                    <div class="body-box-perfil">
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Notificações por e-mail	
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta1" checked>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Inscrever-se para receber atualizações de seu gerente	
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta2" checked>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Assinatura das notícias da empresa
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta3" checked>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Assinatura das promoções da empresa	
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta4" checked>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Assinou a análise de negociação da empresa
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta5" checked>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Subscrito aos extratos da conta de negociação
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta6" checked>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Assinatura de E-mails de Educação
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta7" checked>
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais">
+                            <span class="label-perfil">
+                                Notificações sonoras	
+                            </span>
+
+                            <div class="form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchConta8">
+                            </div>
+                        </div>
+
+                        <div class="box-input-pessoais halal">
+                            <span class="label-perfil">
+                                Idioma	
+                            </span>
+
+                            <ul class="idioma">
+                                <li>
+                                    <a href="#" class="option-language">
+                                        <img src="img/flags/brazil.png" alt="Language" width="15px">
+                                        <span>Português</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="option-language">
+                                        <img src="img/flags/usa.png" alt="Language" width="15px">
+                                        <span>English</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="option-language">
+                                        <img src="img/flags/spain.png" alt="Language" width="15px">
+                                        <span>Español</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="option-language">
+                                        <img src="img/flags/france.png" alt="Language" width="15px">
+                                        <span>Français</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="option-language">
+                                        <img src="img/flags/germany.png" alt="Language" width="15px">
+                                        <span>Deutsche</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-finish-user" type="button">
+                    Encerrar conta
+                </button>
+            </div>
+
+            <div id="Seguranca" class="container-tab tab-item-dash" style="display:none">
+                <h5>Segurança</h5>
+            </div>
+
+            <div id="Historico" class="container-tab tab-item-dash" style="display:none">
+                <h5>Historico de Operações</h5>
+            </div>
+        </div>
+    </main>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

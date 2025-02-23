@@ -1,0 +1,100 @@
+{
+    "title": {
+        "style": {
+            "fontSize": "12px",
+            "color": "#fff"
+        }
+    },
+    "yAxis": {
+        "labels": {
+            "style": {
+                "color": "#fff",
+                "fontSize": "12px"
+            },
+            "align": "left"
+        },
+        "gridLineColor": "#2a3041",
+        "height": "100%"
+    },
+    "xAxis": {
+        "overscroll": 500000,
+        "range": 800000,
+        "gridLineWidth": 1,
+        "labels": {
+            "style": {
+                "color": "#fff",
+                "fontSize": "12px"
+            }
+        },
+        "gridLineColor": "#2a3041",
+        "crosshair": {
+            "color": "#2a3041"
+        }
+    },
+    "rangeSelector": {
+        "buttons": [
+            { "type": "minute", "count": 15, "text": "15m" },
+            { "type": "hour", "count": 1, "text": "1h" },
+            { "type": "all", "count": 1, "text": "All" }
+        ],
+        "enabled": true,
+        "inputEnabled": false,
+        "floating": true,
+        "y": -9,
+        "x": 0,
+        "verticalAlign": "top",
+        "align": "right",
+        "selected": 1,
+        "buttonPosition": { "align": "right" },
+        "labelStyle": { "color": "#fff", "fontSize": "12px" }
+    },
+    "navigator": {
+        "enabled": false,
+        "bindingsClassName": "tools-container",
+        "series": { "color": "#000000" }
+    },
+    "scrollbar": {
+        "enabled": false
+    },
+    "tooltip": {
+        "shape": "square",
+        "headerShape": "callout",
+        "borderWidth": 0,
+        "shadow": false,
+        "style": { "fontSize": "12px" }
+    },
+    "legend": {
+        "itemStyle": { "fontSize": "12px", "color": "#fff" }
+    },
+    "stockTools": {
+        "gui": {
+            "enabled": true,
+            "buttons": [
+                "indicators",
+                "lines",
+                "crookedLines",
+                "measure",
+                "advanced",
+                "toggleAnnotations",
+                "verticalLabels",
+                "flags",
+                "typeChange",
+                "currentPriceIndicator"
+            ]
+        }
+    },
+    "responsive": {
+        "rules": [
+            {
+                "condition": { "maxWidth": 800 },
+                "chartOptions": {
+                    "rangeSelector": {
+                        "inputEnabled": false,
+                        "verticalAlign": "bottom",
+                        "y": 0
+                    }
+                }
+            }
+        ]
+    }
+}
