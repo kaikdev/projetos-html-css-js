@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game - Crash</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="box-game-crash">
+            <div class="box-game">
+                <div class="game" id="game">
+                    <div class="list-history">
+                        <ul>
+                            <li>
+                                <button type="button" class="list-win">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-win">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-win">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-lose">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-lose">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-lose">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-win">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-lose">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-win">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-lose">5,36X</button>
+                            </li>
+                            <li>
+                                <button type="button" class="list-win">5,36X</button>
+                            </li>
+                            
+                            <li>
+                                <button type="button" class="list-lose" data-bs-toggle="modal" data-bs-target="#itemModalHistory">5,36X</button>
+                            </li>
+
+                            <li>
+                                <button type="button" class="list-win" data-bs-toggle="modal" data-bs-target="#itemModalHistory">5,36X</button>
+                            </li>
+
+                            <li>
+                                <button type="button" class="list-history-full" data-bs-toggle="modal" data-bs-target="#modalHistoricoGame">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="rocket" id="pre-game" style="display: flex;">
+                        <div class="text-rocket waiting">
+                            <h5>Preparação da rodada</h5>
+                            <p>Clique em começar</p>
+                        </div>
+
+                        <div class="rocket-waiting">
+                            <div class="area-img-rocket">
+                                <img src="img/rocket.png" class="img-rocket" alt="image">
+                                <img src="img/smoke-rocket.png" class="img-smoke" alt="image">
+                                <img src="img/wing-left.png" class="wing-left" alt="image">
+                                <img src="img/wing-right.png" class="wing-right" alt="image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rocket" id="game-going" style="display: none;">
+                        <div class="rocket-top">
+                            <div class="area-img-rocket">
+                                <img src="img/rocket.png" class="img-rocket" alt="image">
+                                <img src="img/flame-rocket.png" class="img-flame" alt="image">
+                                <img src="img/wing-left.png" class="wing-left" alt="image">
+                                <img src="img/wing-right.png" class="wing-right" alt="image">
+                            </div>
+                        </div>
+
+                        <div class="text-rocket">
+                            <h5>Pagamento Atual</h5>
+                            <p>2,35X</p>
+                        </div>
+                    </div>
+
+                    <div class="rocket" id="game-finish" style="display: none;">
+                        <div class="rocket-finished">
+                            <div class="area-img-rocket">
+                                <img src="img/rocket.png" class="img-rocket" alt="image">
+                                <img src="img/wing-left.png" class="wing-left" alt="image">
+                                <img src="img/wing-right.png" class="wing-right" alt="image">
+                                <img src="img/explosao.png" class="image-explosao" alt="image">
+                            </div>
+                        </div>
+
+                        <div class="text-rocket">
+                            <h5>Rodada finalizada</h5>
+                            <p class="win">2,27X</p>
+                            <p class="lose" style="display: none;">2,27X</p>
+                        </div>
+                    </div>
+
+                    <div class="area-game-controller">
+                        <div class="game-controller">
+                            <div class="header-controller">
+                                <button type="button" id="btnNormal" class="active">Normal</button>
+
+                                <button type="button" id="btnAuto">Auto</button>
+                            </div>
+
+                            <div class="controller-right">
+                                <div class="buttons-controller">
+                                    <div class="buttons-controller-left">
+                                        <div class="input-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="inputQuantia" placeholder="Quantia">
+                                                <label for="inputQuantia">Quantia</label>
+                                            </div>
+        
+                                            <span class="input-group-text">R$</span>
+                                        </div>
+                                        
+                                        <div class="buttons-double">
+                                            <button type="button" class="double">½</button>
+        
+                                            <button type="button" class="double">2x</button>
+                                        </div>
+                                        
+                                    </div>           
+                                    
+                                    <div class="buttons-controller-right">
+                                        <div class="input-group">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="inputAutoRetirar" placeholder="AutoRetirar">
+                                                <label for="inputAutoRetirar">Auto Retirar</label>
+                                            </div>
+        
+                                            <span class="input-group-text auto-retirar">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </span>
+                                        </div>
+        
+                                        <div class="input-group game-auto" style="display: none;">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="inputTotalApostas" placeholder="TotalApostas">
+                                                <label for="inputTotalApostas">Total Apostas</label>
+                                            </div>
+        
+                                            <span class="input-group-text auto-retirar">
+                                                <i class="fa-solid fa-infinity"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="game-mode">
+                                    <div class="mode-normal game-normal">
+                                        <button type="button" class="btn-default btn-start-game">Começar o Jogo</button>
+                                    </div>
+    
+                                    <div class="mode-auto game-auto" style="display: none;">
+                                        <button type="button" class="btn-default btn-start-game">Iniciar Auto-Aposta</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="options-game">
+                    <div class="left">
+                        <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tela Full Screen">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
+                    </div>
+
+                    <div class="right">
+                        <div class="btn-group dropup dropdown-menu-end">
+                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" title="Informações">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </button>
+
+                            <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#modalTutorialRegras" data-bs-toggle="modal" data-bs-target="#modalTutorialRegras" id="btnTutorial">Tutorial</a>
+                                    </li>
+                                    <li>
+                                        <a href="#modalTutorialRegras" data-bs-toggle="modal" id="btnRegras">Regras</a>
+                                    </li>
+                                <li>
+                                    <a href="#">Justiça</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Som">
+                            <i class="fa-solid fa-volume-high"></i>
+
+                            <i class="fa-solid fa-volume-off" style="display: none;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="area-table-game accordion accordion-flush" id="accordionGame">
+                <div class="headers-accordion">
+                    <h2 class="accordion-header" id="flush-headingApostas">
+                        <button type="button" data-bs-target="#flush-collapseApostas" aria-expanded="true" aria-controls="flush-collapseApostas">
+                            Apostas
+                        </button>
+                    </h2>
+                </div>
+
+                <div class="accordion-item">
+                    <div id="flush-collapseApostas" class="accordion-collapse collapse show" aria-labelledby="flush-headingApostas" data-bs-parent="#accordionGame">
+                        <div class="total-players">
+                            <span class="players">
+                                <strong>34 jogadores</strong>
+                                fizeram suas apostas
+                            </span>
+
+                            <span class="value">R$ 294,03</span>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table-game">
+                                <thead>
+                                    <tr>
+                                        <td>Usuário</td>
+                                        <td>Aposta</td>
+                                        <td>Multiplicador</td>
+                                        <td>Lucro</td>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                <i class="fa-solid fa-crown"></i>
+                                                Nome do Usuário
+                                            </span>
+                                        </td>
+    
+                                        <td>R$ 25,00</td>
+                                        <td>2,09X</td>
+                                        <td style="color: #06e385;">R$ 21,80</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                <i class="fa-solid fa-crown"></i>
+                                                Nome do Usuário
+                                            </span>
+                                        </td>
+    
+                                        <td>R$ 25,00</td>
+                                        <td>2,09X</td>
+                                        <td style="color: #06e385;">R$ 21,80</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                <i class="fa-solid fa-crown"></i>
+                                                Nome do Usuário
+                                            </span>
+                                        </td>
+    
+                                        <td>R$ 25,00</td>
+                                        <td>2,09X</td>
+                                        <td style="color: #f9305b;">R$ 21,80</td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Histórico Rodada -->
+    <div class="modal fade" id="modalHistoricoGame" tabindex="-1" aria-labelledby="modalHistoricoGameLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modalHistoricoGameLabel">Histórico do Crash II</h1>
+                </div>
+
+                <div class="modal-body">
+                    <div class="area-itens-historico">
+                        <div class="list-history">
+                            <ul>
+                                <li>
+                                    <button type="button" class="list-win">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-win">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-win">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-lose">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-lose">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-lose">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-win">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-lose">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-win">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-lose">5,36X</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="list-win">5,36X</button>
+                                </li>
+                                
+                                <li>
+                                    <button type="button" class="list-lose" data-bs-toggle="modal" data-bs-target="#itemModalHistory">5,36X</button>
+                                </li>
+    
+                                <li>
+                                    <button type="button" class="list-win" data-bs-toggle="modal" data-bs-target="#itemModalHistory">5,36X</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pagination-historico">
+                        <p>Página 1 de 10</p>
+
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+                                    </a>
+                                </li>
+
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Histórico Rodada -->
+    <div class="modal fade" id="itemModalHistory" tabindex="-1" aria-labelledby="itemModalHistoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <h1 class="modal-title" id="itemModalHistoryLabel">Crash II</h1>
+                    
+                    <h2 class="modal-title">#2O1BYbJ2rK jogada em 30/01/2024 10:21 pm</h2>
+                </div>
+
+                <div class="modal-body">
+                    <div class="area-history">
+                        <img src="img/rocket-up.svg" alt="image" width="auto" height="135px">
+
+                        <p class="text-history">3.20X</p>
+                    </div>
+
+                    <div class="input-group input-history">
+                        <input type="text" id="rodadaId" class="form-control" value="ff585e80627979da2f9a15ce8c3142ba1d16b5e384f17ce6766be892c059a9fe" readonly>
+
+                        <button type="button" id="copyButton">
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="verify-history">Verificar Aposta</a>
+
+                    <div class="table-responsive">
+                        <table class="table-game">
+                            <thead>
+                                <tr>
+                                    <td>Usuário</td>
+                                    <td>Aposta</td>
+                                    <td>Multiplicador</td>
+                                    <td>Lucro</td>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>
+                                            <i class="fa-solid fa-crown"></i>
+                                            Nome do Usuário
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 25,00</td>
+                                    <td>2,09X</td>
+                                    <td style="color: #06e385;">R$ 21,80</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>
+                                            <i class="fa-solid fa-crown"></i>
+                                            Nome do Usuário
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 25,00</td>
+                                    <td>2,09X</td>
+                                    <td style="color: #06e385;">R$ 21,80</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <span>
+                                            <i class="fa-solid fa-crown"></i>
+                                            Nome do Usuário
+                                        </span>
+                                    </td>
+
+                                    <td>R$ 25,00</td>
+                                    <td>2,09X</td>
+                                    <td style="color: #f9305b;">R$ 21,80</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Histórico Tutorial e Regras -->
+    <div class="modal fade" id="modalTutorialRegras" tabindex="-1" aria-labelledby="modalTutorialRegrasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-header">
+                    <a href="#" id="titleTutorial">Tutorial</a>
+
+                    <a href="#" id="titleRegras">Regras</a>
+                </div>
+
+                <div class="modal-body">
+                    <div class="area-tutorial" id="areaTutorial">
+                        <div class="etapa one" style="display: block;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa1.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Crash II
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Crash II é um jogo em que você precisa se retirar da aposta antes que o gráfico crashe (pare) com rodadas bônus.
+                            </p>
+                        </div>
+
+                        <div class="etapa two" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa2.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Aposte
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Selecione um valor e faça sua aposta.
+                            </p>
+                        </div>
+
+                        <div class="etapa three" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa3.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Gráfico
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                O gráfico continuará a aumentar. Quanto maior o multiplicador, maior o seu pagamento!
+                            </p>
+                        </div>
+
+                        <div class="etapa four" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa4.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Sacar dinheiro
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Saia antes das quedas. Saia com sucesso e ganhe sua aposta vezes o multiplicador.
+                            </p>
+                        </div>
+
+                        <div class="etapa five" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa5.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Perda
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                No entanto, se o jogo travar antes de você sacar, você perderá a sua aposta.
+                            </p>
+                        </div>
+
+                        <div class="etapa six" style="display: none;">
+                            <div class="area-gif-etapa">
+                                <img src="img/etapa6.gif" alt="gif-tutorial">
+                            </div>
+
+                            <h2 class="title-tutorial">
+                                Rodada bônus
+                            </h2>
+
+                            <p class="desc-tutorial">
+                                Espere por uma rodada bônus, pois quando ela acontecer, a Blaze dobrará seu pagamento.
+                            </p>
+                        </div>
+
+                        <ul class="list-tutorial">
+                            <li>
+                                <button type="button" id="btnEtapaOne" class="active"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaTwo"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaThree"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaFour"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaFive"></button>
+                            </li>
+
+                            <li>
+                                <button type="button" id="btnEtapaSix"></button>
+                            </li>
+                        </ul>
+
+                        <button type="button" id="nextEtapa">
+                            Próximo Passo
+                        </button>
+                    </div>
+
+                    <div class="area-regras" id="areaRegras">
+                        <ol>
+                            <li>
+                                Nenhum reembolso será oferecido aos jogadores que sofrerem lag (atraso) ao utilizar o recurso de retirada no jogo Crash II.
+                            </li>
+
+                            <li>
+                                Às vezes você receberá um pouco mais ou menos do que o multiplicador em que pediu a retirada no Crash. Isso ocorre porque há um atraso entre seu computador e o nosso servidor.
+                            </li>
+
+                            <li>
+                                Se você retirar no mesmo momento em que o Crash II parar, você perde a aposta.
+                            </li>
+
+                            <li>
+                                A rodada de bônus ocorre aleatoriamente, verifique o Fairness para obter mais informações.
+                            </li>
+
+                            <li>
+                                Depois que a rodada de bônus (Double payout) for anunciado, não será possível entrar, para participar você deve já ter feito sua aposta anteriormente.
+                            </li>
+
+                            <li>
+                                A rodada de bônus dobrará seu pagamento, ex: você aposta $10 e retira em x2 em vez de ganhar $20 você receberá $40 (lucro de $30).
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

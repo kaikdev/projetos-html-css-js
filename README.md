@@ -30,6 +30,8 @@ Sinta-se à vontade para navegar pelos projetos e explorar um pouco do que já d
 
 - **Projeto Betmart**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-betmart/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-betmart/)
 
+- **Projeto Game Crash**: [https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-game-crash/](https://kaikdev.github.io/projetos-html-css-js/projetos-complexos/projeto-game-crash/)
+
 
 ### Projetos Simples
 
